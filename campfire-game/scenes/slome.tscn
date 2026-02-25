@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dt8aqpj5t7a6f"]
+
+[ext_resource type="Texture2D" uid="uid://dundphnu2sjri" path="res://assets/slome-enemy/sprite_0.png" id="1_hseml"]
+[ext_resource type="Texture2D" uid="uid://o2y3g3ny5spd" path="res://assets/slome-enemy/sprite_1.png" id="2_ercrr"]
+[ext_resource type="Texture2D" uid="uid://dy4yiub7e50q4" path="res://assets/slome-enemy/sprite_2.png" id="3_4c46a"]
+[ext_resource type="Texture2D" uid="uid://cc7ei11yq8gh3" path="res://assets/slome-enemy/sprite_3.png" id="4_gt03r"]
+[ext_resource type="Texture2D" uid="uid://fft1cm431qdb" path="res://assets/slome-enemy/sprite_4.png" id="5_aryh7"]
+[ext_resource type="Texture2D" uid="uid://eyne7cmvhoro" path="res://assets/slome-enemy/sprite_5.png" id="6_twjrw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kf7kj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hseml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ercrr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4c46a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gt03r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_aryh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_twjrw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jj2xj"]
+height = 24.372658
+
+[node name="Slome" type="Node2D" unique_id=1860749951]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=539524692]
+sprite_frames = SubResource("SpriteFrames_kf7kj")
+autoplay = "default"
+frame_progress = 0.04440563
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D" unique_id=1389905611]
+scale = Vector2(1.3386139, 0.6564733)
+shape = SubResource("CapsuleShape2D_jj2xj")

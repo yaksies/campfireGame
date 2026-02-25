@@ -1,98 +1,20 @@
 [gd_scene format=3 uid="uid://bpne6t7un7wam"]
 
-[ext_resource type="Texture2D" uid="uid://cbrkko8thndfk" path="res://assets/bat-enemy/Bat-IdleFly.png" id="1_uwrxv"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yqjtg"]
-atlas = ExtResource("1_uwrxv")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lnu2h"]
-atlas = ExtResource("1_uwrxv")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lbhrr"]
-atlas = ExtResource("1_uwrxv")
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_iywne"]
-atlas = ExtResource("1_uwrxv")
-region = Rect2(192, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p57ef"]
-atlas = ExtResource("1_uwrxv")
-region = Rect2(256, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u5sy4"]
-atlas = ExtResource("1_uwrxv")
-region = Rect2(320, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gee14"]
-atlas = ExtResource("1_uwrxv")
-region = Rect2(384, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0tnpc"]
-atlas = ExtResource("1_uwrxv")
-region = Rect2(448, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vtaks"]
-atlas = ExtResource("1_uwrxv")
-region = Rect2(512, 0, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_kvpfn"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yqjtg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lnu2h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lbhrr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_iywne")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p57ef")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u5sy4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gee14")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0tnpc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vtaks")
-}],
-"loop": true,
-"name": &"default",
-"speed": 10.0
-}]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_uwrxv"]
-radius = 6.0
+[ext_resource type="PackedScene" uid="uid://dt8aqpj5t7a6f" path="res://scenes/slome.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://tmf3l102bbhu" path="res://scenes/bat.tscn" id="2_yqjtg"]
 
 [node name="Game" type="Node2D" unique_id=1105641270]
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=416887997]
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1503141855]
+zoom = Vector2(2, 2)
+
 [node name="Enemies" type="Node" parent="." unique_id=700751319]
 
 [node name="Slome" type="Node" parent="Enemies" unique_id=2088335578]
 
-[node name="Bat" type="CharacterBody2D" parent="." unique_id=1157075453]
+[node name="Slome" parent="Enemies/Slome" unique_id=1860749951 instance=ExtResource("1_uwrxv")]
 
-[node name="IdleAnimation" type="AnimatedSprite2D" parent="Bat" unique_id=1173255297]
-sprite_frames = SubResource("SpriteFrames_kvpfn")
-autoplay = "default"
-frame_progress = 0.47765076
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bat" unique_id=401908969]
-shape = SubResource("CircleShape2D_uwrxv")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1449379361]
-zoom = Vector2(4, 4)
+[node name="Bat" parent="Enemies" unique_id=627129010 instance=ExtResource("2_yqjtg")]
+position = Vector2(-47, -19)
