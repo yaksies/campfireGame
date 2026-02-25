@@ -36,6 +36,17 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jdg25"]
+
+[sub_resource type="Gradient" id="Gradient_jdg25"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_y6stn"]
+gradient = SubResource("Gradient_jdg25")
+fill = 1
+fill_from = Vector2(0.4982639, 0.4878472)
+fill_to = Vector2(0.5, 0.5)
+metadata/_snap_enabled = true
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_spggs"]
 
 [node name="Lantern" type="Node2D" unique_id=733144119]
@@ -43,9 +54,23 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=512067973]
 sprite_frames = SubResource("SpriteFrames_5omvi")
 autoplay = "default"
-frame_progress = 0.8058203
+frame_progress = 0.4732591
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1410033300]
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=48950917]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_jdg25")
+position = Vector2(0, -1.9073486e-06)
+scale = Vector2(0.9114584, 0.8880209)
+energy = 0.5
+shadow_enabled = true
+shadow_filter_smooth = 3.5
+texture = SubResource("GradientTexture2D_y6stn")
+texture_scale = 0.6
+height = 200.0
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1664230729]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1410033300]
 shape = SubResource("CapsuleShape2D_spggs")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=704469639]

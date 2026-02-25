@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://fft1cm431qdb" path="res://assets/slome-enemy/sprite_4.png" id="5_aryh7"]
 [ext_resource type="Texture2D" uid="uid://eyne7cmvhoro" path="res://assets/slome-enemy/sprite_5.png" id="6_twjrw"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_kf7kj"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_hseml"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -33,16 +33,22 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jj2xj"]
-height = 24.372658
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ercrr"]
+radius = 9.375009
+height = 68.88471
 
-[node name="Slome" type="Node2D" unique_id=1860749951]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=2036836032]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=539524692]
-sprite_frames = SubResource("SpriteFrames_kf7kj")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1688055410]
+sprite_frames = SubResource("SpriteFrames_hseml")
 autoplay = "default"
-frame_progress = 0.24774778
+frame_progress = 0.8363878
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D" unique_id=1389905611]
-scale = Vector2(1.3386139, 0.6564733)
-shape = SubResource("CapsuleShape2D_jj2xj")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=126948846]
+position = Vector2(0.99999994, -1)
+scale = Vector2(1.3701972, 0.24551941)
+shape = SubResource("CapsuleShape2D_ercrr")
+
+[node name="Camera2D" type="Camera2D" parent="CollisionShape2D" unique_id=1190471383]
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true

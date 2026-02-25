@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="campfireGame"
-run/main_scene="uid://bpne6t7un7wam"
+run/main_scene="uid://ddc50ffskuo7b"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
