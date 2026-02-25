@@ -41,7 +41,7 @@ height = 24.372658
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=539524692]
 sprite_frames = SubResource("SpriteFrames_kf7kj")
 autoplay = "default"
-frame_progress = 0.04440563
+frame_progress = 0.24774778
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D" unique_id=1389905611]
 scale = Vector2(1.3386139, 0.6564733)
