@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bpne6t7un7wam"]
+
+[node name="Game" type="Node2D" unique_id=1105641270]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=416887997]
+
+[node name="Enemies" type="Node" parent="." unique_id=700751319]
+
+[node name="Slome" type="Node" parent="Enemies" unique_id=2088335578]
