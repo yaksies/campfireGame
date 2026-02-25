@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://ch518yq0o8s8"]
+
+[ext_resource type="Texture2D" uid="uid://c0yd6ukgngp2p" path="res://assets/lantern/sprite_1.png" id="1_jdg25"]
+[ext_resource type="Texture2D" uid="uid://burmwo85tmcl3" path="res://assets/lantern/sprite_0.png" id="2_y6stn"]
+[ext_resource type="Texture2D" uid="uid://bia08nmbdohkp" path="res://assets/lantern/sprite_2.png" id="3_4a08e"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5omvi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jdg25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_jdg25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_y6stn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_y6stn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_jdg25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_jdg25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4a08e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4a08e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_spggs"]
+
+[node name="Lantern" type="Node2D" unique_id=733144119]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=512067973]
+sprite_frames = SubResource("SpriteFrames_5omvi")
+autoplay = "default"
+frame_progress = 0.8058203
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1410033300]
+shape = SubResource("CapsuleShape2D_spggs")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=704469639]
+zoom = Vector2(2, 2)
