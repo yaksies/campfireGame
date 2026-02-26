@@ -1,66 +1,61 @@
-[gd_scene format=3 uid="uid://bp8ta6ldqkunr"]
+[gd_scene format=3 uid="uid://bpne6t7un7wam"]
 
-[ext_resource type="PackedScene" uid="uid://tmf3l102bbhu" path="res://scenes/bat.tscn" id="1_uwrxv"]
-[ext_resource type="PackedScene" uid="uid://ch518yq0o8s8" path="res://scenes/lantern.tscn" id="2_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://dt8aqpj5t7a6f" path="res://scenes/slome.tscn" id="3_lnu2h"]
-[ext_resource type="PackedScene" uid="uid://n6n6brl24fak" path="res://scenes/player.tscn" id="4_lbhrr"]
-[ext_resource type="Texture2D" uid="uid://d2l65nufxlbcb" path="res://assets/world/sprite_0.png" id="5_gee14"]
-[ext_resource type="Texture2D" uid="uid://bp8m8hip0n7bo" path="res://assets/world/sprite_1.png" id="6_0tnpc"]
-[ext_resource type="Texture2D" uid="uid://ccs7rrbftndvm" path="res://assets/world/sprite_2.png" id="7_vtaks"]
-[ext_resource type="Texture2D" uid="uid://oli2kh8ldir3" path="res://assets/world/sprite_3.png" id="8_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://tmf3l102bbhu" path="res://scenes/bat.tscn" id="1_gee14"]
+[ext_resource type="PackedScene" uid="uid://ch518yq0o8s8" path="res://scenes/lantern.tscn" id="2_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://n6n6brl24fak" path="res://scenes/player.tscn" id="3_vtaks"]
+[ext_resource type="PackedScene" uid="uid://dt8aqpj5t7a6f" path="res://scenes/slome.tscn" id="4_kvpfn"]
+[ext_resource type="Texture2D" uid="uid://d2l65nufxlbcb" path="res://assets/world/sprite_0.png" id="5_dinhu"]
+[ext_resource type="Texture2D" uid="uid://bp8m8hip0n7bo" path="res://assets/world/sprite_1.png" id="6_kvuet"]
+[ext_resource type="Texture2D" uid="uid://ccs7rrbftndvm" path="res://assets/world/sprite_2.png" id="7_trtic"]
+[ext_resource type="Texture2D" uid="uid://oli2kh8ldir3" path="res://assets/world/sprite_3.png" id="8_ir15t"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dinhu"]
-texture = ExtResource("5_gee14")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ca42v"]
+texture = ExtResource("5_dinhu")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvuet"]
-texture = ExtResource("6_0tnpc")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rysoc"]
+texture = ExtResource("6_kvuet")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trtic"]
-texture = ExtResource("7_vtaks")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ssvqc"]
+texture = ExtResource("7_trtic")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ir15t"]
-texture = ExtResource("8_kvpfn")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_264po"]
+texture = ExtResource("8_ir15t")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSet" id="TileSet_u5sy4"]
+[sub_resource type="TileSet" id="TileSet_1kice"]
 physics_layer_0/collision_layer = 1
-sources/2 = SubResource("TileSetAtlasSource_dinhu")
-sources/3 = SubResource("TileSetAtlasSource_kvuet")
-sources/4 = SubResource("TileSetAtlasSource_trtic")
-sources/5 = SubResource("TileSetAtlasSource_ir15t")
+sources/1 = SubResource("TileSetAtlasSource_ca42v")
+sources/2 = SubResource("TileSetAtlasSource_rysoc")
+sources/3 = SubResource("TileSetAtlasSource_ssvqc")
+sources/4 = SubResource("TileSetAtlasSource_264po")
 
-[node name="Game" type="Node2D" unique_id=610660553]
-position = Vector2(-39, -45)
+[node name="Game" type="Node2D" unique_id=589451270]
 
-[node name="Bat" parent="." unique_id=627129010 instance=ExtResource("1_uwrxv")]
-position = Vector2(-23, -3)
+[node name="Bat" parent="." unique_id=67669957 instance=ExtResource("1_gee14")]
+position = Vector2(18, -30)
 
-[node name="Lantern" parent="." unique_id=733144119 instance=ExtResource("2_yqjtg")]
-<<<<<<< HEAD
-position = Vector2(36, 11)
-=======
-position = Vector2(48, -4)
->>>>>>> 61b0237cf1f45c475f8f7e5d55a22ee8c653b0d5
+[node name="Lantern" parent="." unique_id=733144119 instance=ExtResource("2_0tnpc")]
+position = Vector2(62, -97)
 
-[node name="CharacterBody2D" parent="." unique_id=2036836032 instance=ExtResource("3_lnu2h")]
-position = Vector2(81, -32)
+[node name="Player" parent="." unique_id=1307399855 instance=ExtResource("3_vtaks")]
+position = Vector2(77, -48)
 
-[node name="Player" parent="." unique_id=1307399855 instance=ExtResource("4_lbhrr")]
-position = Vector2(143, -19)
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=867772181]
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=35773355]
-zoom = Vector2(2, 2)
-limit_smoothed = true
+[node name="Slome" parent="." unique_id=2036836032 instance=ExtResource("4_kvpfn")]
+position = Vector2(145, -11)
 
-[node name="TileMap" type="TileMap" parent="." unique_id=1306650108]
+[node name="TileMap" type="TileMap" parent="." unique_id=786301979]
 scale = Vector2(2, 2)
-tile_set = SubResource("TileSet_u5sy4")
+tile_set = SubResource("TileSet_1kice")
 format = 2
-layer_0/tile_data = PackedInt32Array(196617, 5, 0, 196618, 5, 0, 196619, 5, 0, 131084, 5, 0, 196620, 5, 0, 131085, 5, 0, 196621, 5, 0, 131086, 5, 0, 196622, 5, 0, 13, 3, 0, 65549, 5, 0, 14, 3, 0, 65550, 5, 0, 15, 3, 0, 65551, 5, 0, 16, 3, 0, 65552, 5, 0, 17, 3, 0, 18, 3, 0, 65554, 5, 0, 131087, 5, 0, 196623, 5, 0, 131088, 5, 0, 196624, 5, 0, 65548, 3, 0, 196607, 3, 0, 131072, 3, 0, 131073, 3, 0, 131074, 3, 0, 131075, 3, 0, 131076, 3, 0, 131077, 3, 0, 131078, 3, 0, 131079, 3, 0, 131080, 3, 0, 131081, 3, 0, 131082, 3, 0, 131083, 3, 0, 262143, 5, 0, 196608, 5, 0, 196609, 5, 0, 196610, 5, 0, 196611, 5, 0, 196612, 5, 0, 196613, 5, 0, 196614, 5, 0, 196615, 5, 0, 196616, 5, 0, 65553, 5, 0, 131089, 5, 0, 196625, 5, 0)
+layer_0/tile_data = PackedInt32Array(131069, 4, 0, 131070, 4, 0, 131071, 4, 0, 65536, 4, 0, 65537, 4, 0, 65538, 4, 0, 65539, 4, 0, 65540, 4, 0, 65541, 4, 0, 65542, 4, 0, 65543, 4, 0, 65544, 4, 0, 65545, 4, 0, 65546, 4, 0, 6, 4, 0, 7, 4, 0, 8, 4, 0, 9, 4, 0, 10, 4, 0, 65533, 2, 0, 65534, 2, 0, 65535, 2, 0, 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, -65530, 2, 0, -65529, 2, 0, -65528, 2, 0, -65527, 2, 0, -65526, 2, 0)
