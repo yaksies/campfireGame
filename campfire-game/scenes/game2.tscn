@@ -11,5 +11,5 @@
 [node name="Lantern" parent="." unique_id=733144119 instance=ExtResource("2_h21dd")]
 position = Vector2(26, -2)
 
-[node name="CharacterBody2D" parent="." unique_id=2036836032 instance=ExtResource("3_dflkw")]
+[node name="Slome" parent="." unique_id=2036836032 instance=ExtResource("3_dflkw")]
 position = Vector2(81, -32)
