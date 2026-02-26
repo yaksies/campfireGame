@@ -42,7 +42,8 @@ height = 68.88471
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1688055410]
 sprite_frames = SubResource("SpriteFrames_hseml")
 autoplay = "default"
-frame_progress = 0.8363878
+frame = 4
+frame_progress = 0.5282058
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=126948846]
 position = Vector2(0.99999994, -1)
