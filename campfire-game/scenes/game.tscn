@@ -38,17 +38,22 @@ sources/4 = SubResource("TileSetAtlasSource_264po")
 
 [node name="Game" type="Node2D" unique_id=589451270]
 
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=345183695]
+position = Vector2(145, -11)
+color = Color(0.007843138, 0.007843138, 0.03137255, 1)
+
 [node name="Bat" parent="." unique_id=67669957 instance=ExtResource("1_gee14")]
 position = Vector2(18, -30)
 
 [node name="Lantern" parent="." unique_id=733144119 instance=ExtResource("2_0tnpc")]
-position = Vector2(62, -97)
+position = Vector2(43, -147)
 
 [node name="Player" parent="." unique_id=1307399855 instance=ExtResource("3_vtaks")]
-position = Vector2(77, -48)
+position = Vector2(92, -46)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=867772181]
-zoom = Vector2(4, 4)
+zoom = Vector2(2, 2)
+limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="Slome" parent="." unique_id=2036836032 instance=ExtResource("4_kvpfn")]
