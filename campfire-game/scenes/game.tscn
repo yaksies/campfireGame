@@ -40,15 +40,24 @@ sources/5 = SubResource("TileSetAtlasSource_ir15t")
 position = Vector2(-39, -45)
 
 [node name="Bat" parent="." unique_id=627129010 instance=ExtResource("1_uwrxv")]
+position = Vector2(-23, -3)
 
 [node name="Lantern" parent="." unique_id=733144119 instance=ExtResource("2_yqjtg")]
+<<<<<<< HEAD
 position = Vector2(36, 11)
+=======
+position = Vector2(48, -4)
+>>>>>>> 61b0237cf1f45c475f8f7e5d55a22ee8c653b0d5
 
 [node name="CharacterBody2D" parent="." unique_id=2036836032 instance=ExtResource("3_lnu2h")]
 position = Vector2(81, -32)
 
 [node name="Player" parent="." unique_id=1307399855 instance=ExtResource("4_lbhrr")]
 position = Vector2(143, -19)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=35773355]
+zoom = Vector2(2, 2)
+limit_smoothed = true
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1306650108]
 scale = Vector2(2, 2)

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://g0u8pqr432st" path="res://scenes/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://byjta63ceofvk" path="res://assets/player/New_Piskel_2.png" id="2_qhqgy"]
+[ext_resource type="PackedScene" uid="uid://ch518yq0o8s8" path="res://scenes/lantern.tscn" id="3_qhqgy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dqkch"]
 animations = [{
@@ -27,3 +28,6 @@ sprite_frames = SubResource("SpriteFrames_dqkch")
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_qlg0r")
 one_way_collision = true
+
+[node name="Lantern" parent="." unique_id=733144119 instance=ExtResource("3_qhqgy")]
+position = Vector2(36, -32)
