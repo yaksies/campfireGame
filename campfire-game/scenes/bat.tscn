@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://tmf3l102bbhu"]
 
-[ext_resource type="Script" uid="uid://btb8xlxmrqpty" path="res://scenes/bat.gd" id="1_ss3tx"]
+[ext_resource type="Script" path="res://scenes/bat.gd" id="1_ss3tx"]
 [ext_resource type="Texture2D" uid="uid://cbrkko8thndfk" path="res://assets/bat-enemy/Bat-IdleFly.png" id="1_uhqni"]
 [ext_resource type="Texture2D" uid="uid://d045k1f0dagse" path="res://assets/bat-enemy/Bat-Attack1.png" id="2_lv0ya"]
 [ext_resource type="Texture2D" uid="uid://b3jd7fopb54m0" path="res://assets/bat-enemy/Bat-Run.png" id="3_ss3tx"]
@@ -134,7 +134,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Attack",
-"speed": 15.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -163,7 +163,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Chase",
-"speed": 10.0
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -207,6 +207,8 @@ script = ExtResource("1_ss3tx")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1118672350]
 sprite_frames = SubResource("SpriteFrames_kn0w6")
 animation = &"Attack"
+frame = 7
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1437462440]
 position = Vector2(0, -2)
