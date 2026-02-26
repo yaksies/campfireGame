@@ -42,7 +42,7 @@ position = Vector2(-39, -45)
 [node name="Bat" parent="." unique_id=627129010 instance=ExtResource("1_uwrxv")]
 
 [node name="Lantern" parent="." unique_id=733144119 instance=ExtResource("2_yqjtg")]
-position = Vector2(26, -2)
+position = Vector2(36, 11)
 
 [node name="CharacterBody2D" parent="." unique_id=2036836032 instance=ExtResource("3_lnu2h")]
 position = Vector2(81, -32)
