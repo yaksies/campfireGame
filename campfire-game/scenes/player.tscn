@@ -112,7 +112,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("24_487ah")
 }],
-"loop": true,
+"loop": false,
 "name": &"land",
 "speed": 6.0
 }, {
@@ -134,115 +134,76 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qlg0r"]
-size = Vector2(27, 50)
-
 [sub_resource type="Animation" id="Animation_wqfne"]
-length = 0.001
+resource_name = "land"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"land"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:offset")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 14)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimatedSprite2D:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(0.033333335),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
 }
-
-[sub_resource type="Animation" id="Animation_dt7fs"]
-resource_name = "land"
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.0009999999, 0.13333334),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [&"land", &"idle"]
-}
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:offset")
+tracks/1/path = NodePath(".:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.01, 0.13333334),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 14), Vector2(0, 0)]
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"land"]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("AnimatedSprite2D:frame")
+tracks/2/path = NodePath(".:offset")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.13333334),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 0]
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 14)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_wqfne"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wnwbv"]
 _data = {
-&"RESET": SubResource("Animation_wqfne"),
-&"land": SubResource("Animation_dt7fs")
+&"land": SubResource("Animation_wqfne")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qlg0r"]
+size = Vector2(27, 57)
 
 [node name="Player" type="CharacterBody2D" unique_id=1307399855]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1737869429]
+position = Vector2(2, 0)
 scale = Vector2(0.82, 0.794)
 sprite_frames = SubResource("SpriteFrames_dqkch")
 animation = &"land"
 offset = Vector2(0, 14)
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1091539]
+root_node = NodePath("../AnimatedSprite2D")
+libraries/ = SubResource("AnimationLibrary_wnwbv")
+
 [node name="Lantern" parent="." unique_id=733144119 instance=ExtResource("3_qhqgy")]
-position = Vector2(28.699999, 0)
+position = Vector2(28, 0)
 scale = Vector2(0.82, 0.794)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1240926811]
-position = Vector2(-1.4, 10)
+position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_qlg0r")
 one_way_collision = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1804253188]
-libraries/ = SubResource("AnimationLibrary_wqfne")
 
 [node name="LanternPos" type="Marker2D" parent="." unique_id=1695732037]
 position = Vector2(28, 0)
