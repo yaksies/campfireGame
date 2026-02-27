@@ -20,15 +20,10 @@
 [ext_resource type="Texture2D" uid="uid://w2sx5i01x7e4" path="res://assets/player/player-jump/sprite_4.png" id="17_4r5pv"]
 [ext_resource type="Texture2D" uid="uid://2vugjdiqh7bc" path="res://assets/player/player-jump/sprite_5.png" id="18_60mlk"]
 [ext_resource type="Texture2D" uid="uid://b1fxm065xgk1j" path="res://assets/player/player-jump/sprite_6.png" id="19_l71n6"]
-[ext_resource type="Texture2D" uid="uid://b3t11qnxkyr6i" path="res://assets/player/player-land/ground hit0.png" id="20_dt7fs"]
 [ext_resource type="Texture2D" uid="uid://cvqv6ptpunwmc" path="res://assets/player/player-walk/sprite_0.png" id="20_ke2ow"]
 [ext_resource type="Texture2D" uid="uid://ddl86ysae1m3q" path="res://assets/player/player-walk/sprite_1.png" id="21_ujl30"]
-[ext_resource type="Texture2D" uid="uid://0ichfdpepl4a" path="res://assets/player/player-land/ground hit1.png" id="21_wqfne"]
 [ext_resource type="Texture2D" uid="uid://c0mles78n2w7p" path="res://assets/player/player-walk/sprite_2.png" id="22_31cv2"]
-[ext_resource type="Texture2D" uid="uid://dmqav2uqyuoau" path="res://assets/player/player-land/ground hit2.png" id="22_wnwbv"]
-[ext_resource type="Texture2D" uid="uid://grlacbg6nij5" path="res://assets/player/player-land/ground hit3.png" id="23_gl8cc"]
 [ext_resource type="Texture2D" uid="uid://b0785ik5jgilw" path="res://assets/player/player-walk/sprite_3.png" id="23_pf23h"]
-[ext_resource type="Texture2D" uid="uid://bn8x3rv5y6f5l" path="res://assets/player/player-land/ground hit4.png" id="24_487ah"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dqkch"]
 animations = [{
@@ -98,26 +93,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("20_dt7fs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_wqfne")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_wnwbv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_gl8cc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_487ah")
-}],
-"loop": false,
-"name": &"land",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": ExtResource("20_ke2ow")
 }, {
 "duration": 1.0,
@@ -134,54 +109,6 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="Animation" id="Animation_dt7fs"]
-resource_name = "RESET"
-
-[sub_resource type="Animation" id="Animation_wqfne"]
-resource_name = "land"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = false
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.033333335),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = false
-tracks/1/path = NodePath(".:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.033333335),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"land"]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = false
-tracks/2/path = NodePath(".:offset")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.033333335),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 14)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_wnwbv"]
-_data = {
-&"RESET": SubResource("Animation_dt7fs"),
-&"land": SubResource("Animation_wqfne")
-}
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qlg0r"]
 size = Vector2(27, 49)
 
@@ -193,12 +120,7 @@ script = ExtResource("1_g2els")
 position = Vector2(2, 0)
 scale = Vector2(0.82, 0.794)
 sprite_frames = SubResource("SpriteFrames_dqkch")
-animation = &"land"
-offset = Vector2(0, 14)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1091539]
-root_node = NodePath("../AnimatedSprite2D")
-libraries/ = SubResource("AnimationLibrary_wnwbv")
+animation = &"idle"
 
 [node name="Lantern" parent="." unique_id=733144119 instance=ExtResource("3_qhqgy")]
 position = Vector2(28.000002, -4)
