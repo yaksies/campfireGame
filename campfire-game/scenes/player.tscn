@@ -227,18 +227,18 @@ scale = Vector2(0.5, 0.5)
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1737869429]
-scale = Vector2(0.87, 0.843)
+scale = Vector2(0.82, 0.794)
 sprite_frames = SubResource("SpriteFrames_dqkch")
 animation = &"land"
 offset = Vector2(0, 14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1240926811]
-position = Vector2(-2, 10)
+position = Vector2(-1.4, 10)
 shape = SubResource("RectangleShape2D_qlg0r")
 one_way_collision = true
 
 [node name="Lantern" parent="." unique_id=733144119 instance=ExtResource("3_qhqgy")]
-position = Vector2(38, 4)
+position = Vector2(136, 18)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1804253188]
 libraries/ = SubResource("AnimationLibrary_wqfne")
