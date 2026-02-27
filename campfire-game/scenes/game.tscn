@@ -46,7 +46,7 @@ color = Color(0.007843138, 0.007843138, 0.03137255, 1)
 position = Vector2(18, -30)
 
 [node name="Lantern" parent="." unique_id=733144119 instance=ExtResource("2_0tnpc")]
-position = Vector2(43, -147)
+position = Vector2(43, -122)
 
 [node name="Player" parent="." unique_id=1307399855 instance=ExtResource("3_vtaks")]
 position = Vector2(92, -46)
