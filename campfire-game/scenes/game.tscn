@@ -45,6 +45,9 @@ color = Color(0.007843138, 0.007843138, 0.03137255, 1)
 [node name="Bat" parent="." unique_id=67669957 instance=ExtResource("1_gee14")]
 position = Vector2(18, -30)
 
+[node name="Slome" parent="." unique_id=2036836032 instance=ExtResource("4_kvpfn")]
+position = Vector2(145, -11)
+
 [node name="Lantern" parent="." unique_id=733144119 instance=ExtResource("2_0tnpc")]
 position = Vector2(43, -147)
 
@@ -55,9 +58,6 @@ position = Vector2(92, -46)
 zoom = Vector2(2.5, 2.5)
 limit_smoothed = true
 position_smoothing_enabled = true
-
-[node name="Slome" parent="." unique_id=2036836032 instance=ExtResource("4_kvpfn")]
-position = Vector2(145, -11)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=786301979]
 scale = Vector2(2, 2)
