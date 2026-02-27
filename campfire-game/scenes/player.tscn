@@ -134,11 +134,14 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="Animation" id="Animation_dt7fs"]
+resource_name = "RESET"
+
 [sub_resource type="Animation" id="Animation_wqfne"]
 resource_name = "land"
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -150,7 +153,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath(".:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
@@ -162,7 +165,7 @@ tracks/1/keys = {
 }
 tracks/2/type = "value"
 tracks/2/imported = false
-tracks/2/enabled = true
+tracks/2/enabled = false
 tracks/2/path = NodePath(".:offset")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
@@ -175,11 +178,12 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wnwbv"]
 _data = {
+&"RESET": SubResource("Animation_dt7fs"),
 &"land": SubResource("Animation_wqfne")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qlg0r"]
-size = Vector2(27, 57)
+size = Vector2(27, 49)
 
 [node name="Player" type="CharacterBody2D" unique_id=1307399855]
 scale = Vector2(0.5, 0.5)
@@ -197,13 +201,13 @@ root_node = NodePath("../AnimatedSprite2D")
 libraries/ = SubResource("AnimationLibrary_wnwbv")
 
 [node name="Lantern" parent="." unique_id=733144119 instance=ExtResource("3_qhqgy")]
-position = Vector2(28, 0)
+position = Vector2(28.000002, -4)
 scale = Vector2(0.82, 0.794)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1240926811]
-position = Vector2(0, 3.5)
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_qlg0r")
 one_way_collision = true
 
 [node name="LanternPos" type="Marker2D" parent="." unique_id=1695732037]
-position = Vector2(28, 0)
+position = Vector2(28, -4)
