@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://ccs7rrbftndvm" path="res://assets/world/ground/sprite_2.png" id="7_trtic"]
 [ext_resource type="PackedScene" uid="uid://chjucrhp8suxt" path="res://scenes/lamp.tscn" id="8_gee14"]
 [ext_resource type="Texture2D" uid="uid://oli2kh8ldir3" path="res://assets/world/ground/sprite_3.png" id="8_ir15t"]
-[ext_resource type="Texture2D" uid="uid://c54kskk1g3e23" path="res://assets/world/backdrop/parallax/parallax0.png" id="9_vtaks"]
-[ext_resource type="Texture2D" uid="uid://d1wgj0n5qeji8" path="res://assets/world/backdrop/parallax/parallax1.png" id="10_kvpfn"]
+[ext_resource type="Texture2D" uid="uid://cj3ie0gcwwjbw" path="res://assets/world/backdrop/parallax/sprite_1.png" id="9_vtaks"]
+[ext_resource type="Texture2D" uid="uid://br88nloi11wxw" path="res://assets/world/backdrop/parallax/sprite_0.png" id="10_kvpfn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ca42v"]
 texture = ExtResource("5_dinhu")
@@ -836,25 +836,25 @@ position = Vector2(66, -36)
 follow_viewport_enabled = true
 
 [node name="backback" type="Parallax2D" parent="ParallaxBackground" unique_id=1511483217]
-visible = false
 scale = Vector2(1.007898, 1)
-scroll_scale = Vector2(0.1, 0.2)
-repeat_size = Vector2(480, 480)
-repeat_times = 9
+scroll_scale = Vector2(0.1, 0.75)
+repeat_size = Vector2(850, 870)
+repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/backback" unique_id=239973628]
-position = Vector2(677.64795, 216)
-scale = Vector2(0.9921639, 1)
+modulate = Color(0.45258546, 0.45258576, 0.45258558, 1)
+position = Vector2(1385.0609, 1351)
+scale = Vector2(1.6742766, 1.8166667)
 texture = ExtResource("9_vtaks")
 
 [node name="foreback" type="Parallax2D" parent="ParallaxBackground" unique_id=549471647]
-scroll_scale = Vector2(0.2, 0.4)
-scroll_offset = Vector2(280, 132)
-repeat_size = Vector2(625, 590)
-repeat_times = 8
+scroll_scale = Vector2(0.2, 0.15)
+scroll_offset = Vector2(2755, 2742)
+repeat_size = Vector2(2000, 2000)
 limit_begin = Vector2(-10000000, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/foreback" unique_id=909765051]
-position = Vector2(715.5, 452.5)
-scale = Vector2(1.3104167, 1.24375)
+modulate = Color(0.772951, 0.77295107, 0.77295107, 1)
+position = Vector2(2233.625, 2275.375)
+scale = Vector2(4.180729, 4.1651044)
 texture = ExtResource("10_kvpfn")
