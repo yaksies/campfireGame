@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oli2kh8ldir3"
-path="res://.godot/imported/sprite_3.png-e51bc4b6b15cf21a7fd8273748a97255.ctex"
+uid="uid://o3wchggw460"
+path="res://.godot/imported/Lamp3.png-9810a5a357ac4352c72f30993f6fa0f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/world/sprite_3.png"
-dest_files=["res://.godot/imported/sprite_3.png-e51bc4b6b15cf21a7fd8273748a97255.ctex"]
+source_file="res://assets/lamp/Lamp3.png"
+dest_files=["res://.godot/imported/Lamp3.png-9810a5a357ac4352c72f30993f6fa0f8.ctex"]
 
 [params]
 

@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://bpne6t7un7wam"]
 
 [ext_resource type="PackedScene" uid="uid://tmf3l102bbhu" path="res://scenes/bat.tscn" id="1_gee14"]
-[ext_resource type="PackedScene" uid="uid://ch518yq0o8s8" path="res://scenes/lantern.tscn" id="2_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://n6n6brl24fak" path="res://scenes/player.tscn" id="3_vtaks"]
 [ext_resource type="PackedScene" uid="uid://dt8aqpj5t7a6f" path="res://scenes/slome.tscn" id="4_kvpfn"]
-[ext_resource type="Texture2D" uid="uid://d2l65nufxlbcb" path="res://assets/world/sprite_0.png" id="5_dinhu"]
-[ext_resource type="Texture2D" uid="uid://bp8m8hip0n7bo" path="res://assets/world/sprite_1.png" id="6_kvuet"]
-[ext_resource type="Texture2D" uid="uid://ccs7rrbftndvm" path="res://assets/world/sprite_2.png" id="7_trtic"]
-[ext_resource type="Texture2D" uid="uid://oli2kh8ldir3" path="res://assets/world/sprite_3.png" id="8_ir15t"]
+[ext_resource type="Texture2D" uid="uid://d2l65nufxlbcb" path="res://assets/world/ground/sprite_0.png" id="5_dinhu"]
+[ext_resource type="Texture2D" uid="uid://bp8m8hip0n7bo" path="res://assets/world/ground/sprite_1.png" id="6_kvuet"]
+[ext_resource type="Texture2D" uid="uid://ccs7rrbftndvm" path="res://assets/world/ground/sprite_2.png" id="7_trtic"]
+[ext_resource type="PackedScene" uid="uid://chjucrhp8suxt" path="res://scenes/lamp.tscn" id="8_gee14"]
+[ext_resource type="Texture2D" uid="uid://oli2kh8ldir3" path="res://assets/world/ground/sprite_3.png" id="8_ir15t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ca42v"]
 texture = ExtResource("5_dinhu")
@@ -48,11 +48,9 @@ position = Vector2(18, -30)
 [node name="Slome" parent="." unique_id=2036836032 instance=ExtResource("4_kvpfn")]
 position = Vector2(145, -11)
 
-[node name="Lantern" parent="." unique_id=733144119 instance=ExtResource("2_0tnpc")]
-position = Vector2(43, -122)
-
 [node name="Player" parent="." unique_id=1307399855 instance=ExtResource("3_vtaks")]
-position = Vector2(92, -46)
+top_level = true
+position = Vector2(90, -35)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=867772181]
 zoom = Vector2(2.5, 2.5)
@@ -64,3 +62,6 @@ scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_1kice")
 format = 2
 layer_0/tile_data = PackedInt32Array(131069, 4, 0, 131070, 4, 0, 131071, 4, 0, 65536, 4, 0, 65537, 4, 0, 65538, 4, 0, 65539, 4, 0, 65540, 4, 0, 65541, 4, 0, 65542, 4, 0, 65543, 4, 0, 65544, 4, 0, 65545, 4, 0, 65546, 4, 0, 6, 4, 0, 7, 4, 0, 8, 4, 0, 9, 4, 0, 10, 4, 0, 65533, 2, 0, 65534, 2, 0, 65535, 2, 0, 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, -65530, 2, 0, -65529, 2, 0, -65528, 2, 0, -65527, 2, 0, -65526, 2, 0)
+
+[node name="Lamp" parent="." unique_id=1425322240 instance=ExtResource("8_gee14")]
+position = Vector2(52, -36)

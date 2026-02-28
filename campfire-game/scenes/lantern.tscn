@@ -39,8 +39,8 @@ animations = [{
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jdg25"]
 
 [sub_resource type="Gradient" id="Gradient_jdg25"]
-offsets = PackedFloat32Array(0.06490385, 0.2716346, 0.81009614, 1)
-colors = PackedColorArray(0.23248088, 0.23248091, 0.23248085, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+offsets = PackedFloat32Array(0, 0.14457831, 1)
+colors = PackedColorArray(0.23248088, 0.23248091, 0.23248085, 1, 1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_y6stn"]
 gradient = SubResource("Gradient_jdg25")
@@ -65,8 +65,8 @@ frame_progress = 0.4732591
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=48950917]
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_jdg25")
-position = Vector2(-2.861023e-06, 0)
-scale = Vector2(5.601679, 6.0462976)
+position = Vector2(0, 2.3841858e-07)
+scale = Vector2(8.347714, 7.997107)
 color = Color(0.72818756, 0.95096916, 0.96130484, 1)
 energy = 3.5
 range_item_cull_mask = 3

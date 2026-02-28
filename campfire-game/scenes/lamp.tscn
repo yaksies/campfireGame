@@ -1,8 +1,45 @@
 [gd_scene format=3 uid="uid://chjucrhp8suxt"]
 
+[ext_resource type="Texture2D" uid="uid://darb85kao40pw" path="res://assets/lamp/Lamp0.png" id="1_hxjgs"]
+[ext_resource type="Texture2D" uid="uid://b37u04j5te2px" path="res://assets/lamp/Lamp1.png" id="2_60c0r"]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_ba3iu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hxjgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_60c0r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_f2tjl"]
+offsets = PackedFloat32Array(0, 0.12650603, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.8253012, 0.8253012, 0.8253012, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wd4c3"]
+gradient = SubResource("Gradient_f2tjl")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.2, 0.9000001)
+metadata/_snap_enabled = true
 
 [node name="Lamp" type="Node2D" unique_id=1425322240]
+light_mask = 1023
+visibility_layer = 1023
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=62429807]
 sprite_frames = SubResource("SpriteFrames_ba3iu")
+autoplay = "default"
+frame_progress = 0.93191546
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=258730351]
+light_mask = 1023
+visibility_layer = 1023
+position = Vector2(9.536743e-07, -56.000004)
+scale = Vector2(2.6796877, 2.59375)
+texture = SubResource("GradientTexture2D_wd4c3")
