@@ -22,7 +22,7 @@ position_smoothing_enabled = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=345183695]
 position = Vector2(146, -11)
-color = Color(0, 0, 0, 1)
+color = Color(0.16565639, 0.16565642, 0.16565636, 1)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1142850047]
 follow_viewport_enabled = true
@@ -31,10 +31,10 @@ follow_viewport_enabled = true
 scale = Vector2(1.007898, 1)
 scroll_scale = Vector2(0.1, 0.75)
 repeat_size = Vector2(224, 224)
-repeat_times = 15
+repeat_times = 11
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/backback" unique_id=239973628]
-modulate = Color(0.23826203, 0.23826227, 0.23826212, 1)
+modulate = Color(0.32544068, 0.32544094, 0.32544088, 1)
 position = Vector2(21.579586, 112.750015)
 scale = Vector2(0.47231126, 0.4677083)
 texture = ExtResource("9_vtaks")
@@ -43,11 +43,13 @@ texture = ExtResource("9_vtaks")
 scroll_scale = Vector2(0.2, 0.15)
 scroll_offset = Vector2(2755, 2742)
 repeat_size = Vector2(385, 385)
-repeat_times = 15
+repeat_times = 11
 limit_begin = Vector2(-10000000, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/foreback" unique_id=909765051]
-modulate = Color(0.39536718, 0.3953672, 0.39536706, 1)
-position = Vector2(434.00003, 520)
+
+modulate = Color(0.4178962, 0.41789624, 0.41789606, 1)
+position = Vector2(429.15625, 531.8438)
+>>>>>>> 7693cd36861644646f7da829bec149e1ca686095
 scale = Vector2(0.8076823, 0.80898416)
 texture = ExtResource("10_kvpfn")
