@@ -208,9 +208,13 @@ radius = 200.0
 radius = 22.022715
 
 [node name="Bat" type="CharacterBody2D" unique_id=67669957]
+collision_layer = 255
+collision_mask = 255
 script = ExtResource("1_ss3tx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1118672350]
+light_mask = 1023
+visibility_layer = 1023
 sprite_frames = SubResource("SpriteFrames_kn0w6")
 animation = &"Idle"
 autoplay = "Idle"
