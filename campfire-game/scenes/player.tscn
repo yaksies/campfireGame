@@ -113,10 +113,14 @@ animations = [{
 size = Vector2(27.5, 54.5)
 
 [node name="Player" type="CharacterBody2D" unique_id=1307399855]
+light_mask = 1023
+visibility_layer = 1023
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1737869429]
+light_mask = 1023
+visibility_layer = 1023
 position = Vector2(9.536743e-07, 0)
 scale = Vector2(0.93083334, 0.9178334)
 sprite_frames = SubResource("SpriteFrames_dqkch")

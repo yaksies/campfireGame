@@ -39,8 +39,8 @@ animations = [{
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jdg25"]
 
 [sub_resource type="Gradient" id="Gradient_jdg25"]
-offsets = PackedFloat32Array(0, 0.14457831, 1)
-colors = PackedColorArray(0.23248088, 0.23248091, 0.23248085, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+offsets = PackedFloat32Array(0, 0.10240964, 1)
+colors = PackedColorArray(0.8235294, 0.8235294, 0.8235294, 1, 0.61516654, 0.61516654, 0.61516654, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_y6stn"]
 gradient = SubResource("Gradient_jdg25")
@@ -52,23 +52,26 @@ metadata/_snap_enabled = true
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_spggs"]
 
 [node name="Lantern" type="Node2D" unique_id=733144119]
-light_mask = 2
-visibility_layer = 2
+light_mask = 1023
+visibility_layer = 1023
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=512067973]
-light_mask = 2
+light_mask = 1023
+visibility_layer = 1023
 scale = Vector2(0.85, 0.85)
 sprite_frames = SubResource("SpriteFrames_5omvi")
 autoplay = "default"
 frame_progress = 0.4732591
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=48950917]
+light_mask = 1023
+visibility_layer = 1023
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_jdg25")
 position = Vector2(0, 2.3841858e-07)
 scale = Vector2(8.347714, 7.997107)
 color = Color(0.72818756, 0.95096916, 0.96130484, 1)
-energy = 3.5
+energy = 3.05
 range_item_cull_mask = 3
 shadow_enabled = true
 shadow_filter_smooth = 3.5
