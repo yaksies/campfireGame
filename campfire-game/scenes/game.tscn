@@ -21,6 +21,7 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=345183695]
+visible = false
 position = Vector2(145, -11)
 color = Color(0.24658787, 0.2465879, 0.24658784, 1)
 
