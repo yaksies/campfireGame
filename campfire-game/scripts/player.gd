@@ -5,8 +5,8 @@ const JUMP_VELOCITY = -300.0
 
 # --- LANTERN & SPRITE NODES ---
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var lantern: Node2D = $Lantern 
-@onready var lantern_pos: Marker2D = $LanternPos 
+@onready var lantern: Node2D = $Lantern
+@onready var lantern_pos: Marker2D = $LanternPos
 
 func _physics_process(delta: float) -> void:
 	# 1. Add Gravity

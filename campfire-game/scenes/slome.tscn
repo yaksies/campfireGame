@@ -38,6 +38,7 @@ radius = 9.375009
 height = 68.88471
 
 [node name="Slome" type="CharacterBody2D" unique_id=2036836032]
+collision_layer = 8
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1688055410]
 sprite_frames = SubResource("SpriteFrames_hseml")

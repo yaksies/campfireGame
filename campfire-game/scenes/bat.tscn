@@ -193,13 +193,19 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0bnbw")
 }],
-"loop": true,
+"loop": false,
 "name": &"Idle",
 "speed": 9.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_60pq2"]
 radius = 14.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ss3tx"]
+radius = 200.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lv0ya"]
+radius = 22.022715
 
 [node name="Bat" type="CharacterBody2D" unique_id=67669957]
 script = ExtResource("1_ss3tx")
@@ -213,4 +219,18 @@ autoplay = "Idle"
 position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_60pq2")
 
+[node name="DetectionRange" type="Area2D" parent="." unique_id=872801545]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionRange" unique_id=1551106507]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_ss3tx")
+
+[node name="AttackRange" type="Area2D" parent="." unique_id=1796070906]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange" unique_id=2126148796]
+shape = SubResource("CircleShape2D_lv0ya")
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_shape_entered" from="DetectionRange" to="." method="_on_detection_range_body_shape_entered"]
+[connection signal="body_shape_exited" from="DetectionRange" to="." method="_on_detection_range_body_shape_exited"]
+[connection signal="body_shape_exited" from="AttackRange" to="." method="_on_attack_range_body_shape_exited"]

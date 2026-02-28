@@ -112,7 +112,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qlg0r"]
 size = Vector2(27.5, 54.5)
 
-[node name="Player" type="CharacterBody2D" unique_id=1307399855]
+[node name="Player" type="CharacterBody2D" unique_id=1307399855 groups=["player"]]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_g2els")
 
@@ -126,7 +126,7 @@ animation = &"idle"
 position = Vector2(38, -24)
 scale = Vector2(1, 1.005)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1240926811]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1240926811 groups=["player"]]
 position = Vector2(-1.75, -1.25)
 shape = SubResource("RectangleShape2D_qlg0r")
 one_way_collision = true
