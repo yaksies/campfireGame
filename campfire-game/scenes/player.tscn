@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://ddl86ysae1m3q" path="res://assets/player/player-walk/sprite_1.png" id="21_ujl30"]
 [ext_resource type="Texture2D" uid="uid://c0mles78n2w7p" path="res://assets/player/player-walk/sprite_2.png" id="22_31cv2"]
 [ext_resource type="Texture2D" uid="uid://b0785ik5jgilw" path="res://assets/player/player-walk/sprite_3.png" id="23_pf23h"]
+[ext_resource type="AudioStream" uid="uid://bhc1qrt1mvswy" path="res://assets/player/player-walk/stepdirt_3.wav" id="25_ke2ow"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dqkch"]
 animations = [{
@@ -115,6 +116,7 @@ size = Vector2(27.5, 54.5)
 [node name="Player" type="CharacterBody2D" unique_id=1307399855 groups=["player"]]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_g2els")
+metadata/_edit_horizontal_guides_ = [-98.0]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1737869429]
 position = Vector2(9.536743e-07, 0)
@@ -133,3 +135,6 @@ one_way_collision = true
 
 [node name="LanternPos" type="Marker2D" parent="." unique_id=1695732037]
 position = Vector2(38, -24)
+
+[node name="FootstepSound" type="AudioStreamPlayer2D" parent="." unique_id=1286733250]
+stream = ExtResource("25_ke2ow")
