@@ -110,26 +110,26 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qlg0r"]
-size = Vector2(27, 49)
+size = Vector2(27.5, 54.5)
 
 [node name="Player" type="CharacterBody2D" unique_id=1307399855]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1737869429]
-position = Vector2(2, 0)
-scale = Vector2(0.82, 0.794)
+position = Vector2(9.536743e-07, 0)
+scale = Vector2(0.93083334, 0.9178334)
 sprite_frames = SubResource("SpriteFrames_dqkch")
 animation = &"idle"
 
 [node name="Lantern" parent="." unique_id=733144119 instance=ExtResource("3_qhqgy")]
-position = Vector2(28.000002, -4)
-scale = Vector2(0.82, 0.794)
+position = Vector2(38, -24)
+scale = Vector2(1, 1.005)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1240926811]
-position = Vector2(0, -0.5)
+position = Vector2(-1.75, -1.25)
 shape = SubResource("RectangleShape2D_qlg0r")
 one_way_collision = true
 
 [node name="LanternPos" type="Marker2D" parent="." unique_id=1695732037]
-position = Vector2(28, -4)
+position = Vector2(38, -24)
