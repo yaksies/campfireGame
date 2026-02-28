@@ -2,16 +2,25 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmw0kiqyi5pgs"
+uid="uid://bp8m8hip0n7bo"
+<<<<<<<< HEAD:campfire-game/assets/world/ground/sprite_1.png.import
 path="res://.godot/imported/sprite_1.png-8f650bd27af15ec23b4e7217260e9a93.ctex"
+========
+path="res://.godot/imported/sprite_1.png-a55dee1c52039628fdc21cc502661e16.ctex"
+>>>>>>>> 900ef8708b67496ddc8e0ba0910285f451f89d77:campfire-game/assets/world/world-land/sprite_1.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:campfire-game/assets/world/ground/sprite_1.png.import
 source_file="res://assets/world/ground/sprite_1.png"
 dest_files=["res://.godot/imported/sprite_1.png-8f650bd27af15ec23b4e7217260e9a93.ctex"]
+========
+source_file="res://assets/world/world-land/sprite_1.png"
+dest_files=["res://.godot/imported/sprite_1.png-a55dee1c52039628fdc21cc502661e16.ctex"]
+>>>>>>>> 900ef8708b67496ddc8e0ba0910285f451f89d77:campfire-game/assets/world/world-land/sprite_1.png.import
 
 [params]
 
