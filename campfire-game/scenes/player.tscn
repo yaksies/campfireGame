@@ -141,7 +141,9 @@ position = Vector2(38, -24)
 
 [node name="FootstepSound" type="AudioStreamPlayer2D" parent="." unique_id=1286733250]
 stream = ExtResource("25_ke2ow")
+bus = &"SFX"
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=464212833]
 stream = ExtResource("26_ujl30")
 volume_db = 9.375
+bus = &"SFX"
