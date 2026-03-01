@@ -7,7 +7,7 @@ func _on_body_entered(body):
 		print("Player hit the spikes!")
 		
 		# Option A: Reload the current level
-		get_tree().reload_current_scene()
+		GameManager.player_died()
 		
 		# Option B: Call a damage function on the player
 		# body.take_damage(10)

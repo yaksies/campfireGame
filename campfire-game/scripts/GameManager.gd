@@ -2,11 +2,15 @@ extends Node
 
 var current_level : int = 7
 var level_container : Node
-var current_level_instance : Node # Keeps track of the active level
+var current_level_instance : Node 
 
 @onready var color_rect = $CanvasLayer/ColorRect
+@onready var death_sound = $DeathSound 
 
 func _ready():
+	# Tell this specific node to NEVER stop processing, even if the game is paused
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	
 	color_rect.modulate.a = 0
 	color_rect.hide()
 
@@ -16,12 +20,11 @@ func start_game():
 
 func player_died():
 	current_level = 1
-	transition_to_level(current_level)
+	transition_death(current_level)
 
 func advance_level():
 	current_level += 1
 	
-	# Skip level 7
 	if current_level == 7:
 		current_level = 8
 		
@@ -31,24 +34,54 @@ func advance_level():
 		
 	transition_to_level(current_level)
 
+# --- NORMAL LEVEL TRANSITION (Fast & Black) ---
 func transition_to_level(level_num: int):
-	# 1. Fade to black
+	color_rect.color = Color(0, 0, 0) 
+	
 	color_rect.show()
 	var tween = create_tween()
 	tween.tween_property(color_rect, "modulate:a", 1.0, 0.5)
 	await tween.finished 
 	
-	# 2. Swap the levels while the screen is black
 	load_level_instance(level_num)
 	
-	# 3. Fade back to transparent
 	var tween_in = create_tween()
 	tween_in.tween_property(color_rect, "modulate:a", 0.0, 0.5)
 	await tween_in.finished
 	color_rect.hide()
 
+# --- DEATH TRANSITION (Slow, Red & Loud) ---
+func transition_death(level_num: int):
+	# 1. Freeze the old level so the dead player can't move
+	get_tree().paused = true
+	
+	color_rect.color = Color(1.0, 0.0, 0.0) 
+	color_rect.show()
+	
+	if death_sound.stream != null:
+		death_sound.play()
+	
+	var tween = create_tween()
+	tween.tween_property(color_rect, "modulate:a", 1.0, 1.5)
+	await tween.finished 
+	
+	# 2. Swap to Level 1 while the screen is solid red
+	load_level_instance(level_num)
+	
+	# 3. UNFREEZE TIME HERE!
+	# The new level is now active and playable while the screen fades back in.
+	get_tree().paused = false
+	
+	# 4. Fade back to transparent slowly
+	var tween_in = create_tween()
+	tween_in.tween_property(color_rect, "modulate:a", 0.0, 1.5)
+	await tween_in.finished
+	
+	color_rect.hide()
+	color_rect.color = Color(0, 0, 0)
+
+# --- LEVEL LOADER ---
 func load_level_instance(level_num: int):
-	# Delete the old level if one exists
 	if current_level_instance != null:
 		current_level_instance.queue_free()
 		
@@ -56,7 +89,6 @@ func load_level_instance(level_num: int):
 	var level_scene = load(level_path)
 	
 	if level_scene:
-		# Create a new instance of the level and add it to the container
 		current_level_instance = level_scene.instantiate()
 		level_container.add_child(current_level_instance)
 	else:

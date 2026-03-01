@@ -812,7 +812,9 @@ position = Vector2(1035, 283)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1303355900]
 zoom = Vector2(2, 2)
+limit_right = 1525
 position_smoothing_enabled = true
+rotation_smoothing_enabled = true
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1872555788]
 scale = Vector2(2, 2)
@@ -825,9 +827,14 @@ layer_1/name = "background"
 [node name="Lamp" parent="." unique_id=1425322240 instance=ExtResource("6_i8krq")]
 position = Vector2(0, -34)
 
-[node name="Sign" parent="." unique_id=314502426 instance=ExtResource("7_y5q54")]
+[node name="Sign" parent="." unique_id=466787511 instance=ExtResource("7_y5q54")]
 position = Vector2(1164, 370)
-dialog_lines = Array[String](["Just jump bro...", "There's no way upward..."])
+dialog_lines = Array[String](["Just jump...", "There's no way upward..."])
+
+[node name="Sign2" parent="." unique_id=314502426 instance=ExtResource("7_y5q54")]
+position = Vector2(840, 89)
+scale = Vector2(0.5, 0.5)
+dialog_lines = Array[String](["You're scared..", "Things will never go back to how they were.."])
 
 [node name="Killzone" parent="." unique_id=1219585669 instance=ExtResource("8_l1t8a")]
 

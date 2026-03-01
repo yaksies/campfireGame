@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var panel = $Panel
 @onready var label = $Panel/RichTextLabel
 @onready var type_timer = $TypeTimer
+@onready var type_sound = $TypeSound
 
 var lines_queue: Array[String] = []
 var current_line_index: int = 0
@@ -28,6 +29,11 @@ func show_current_line():
 func _on_type_timer_timeout():
 	if label.visible_characters < label.text.length():
 		label.visible_characters += 1
+		
+		# A pro trick: randomly shift the pitch slightly every letter 
+		# so the sound effect doesn't feel like a repetitive machine gun
+		type_sound.pitch_scale = randf_range(0.8, 1.4)
+		type_sound.play()
 	else:
 		finish_typing()
 

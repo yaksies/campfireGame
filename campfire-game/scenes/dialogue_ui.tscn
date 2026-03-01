@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://btqb11iwbukg5"]
 
 [ext_resource type="Script" uid="uid://b8s874257ax3e" path="res://scripts/dialogue_ui.gd" id="1_dwk8m"]
+[ext_resource type="AudioStream" uid="uid://dho3k6v3m1nxh" path="res://sounds/fastTyping.mp3" id="2_6q285"]
 
 [node name="DialogueUI" type="CanvasLayer" unique_id=1346528937]
 script = ExtResource("1_dwk8m")
@@ -40,5 +41,9 @@ vertical_alignment = 1
 
 [node name="TypeTimer" type="Timer" parent="." unique_id=259280297]
 wait_time = 0.05
+
+[node name="TypeSound" type="AudioStreamPlayer" parent="." unique_id=1525547019]
+stream = ExtResource("2_6q285")
+bus = &"SFX"
 
 [connection signal="timeout" from="TypeTimer" to="." method="_on_type_timer_timeout"]

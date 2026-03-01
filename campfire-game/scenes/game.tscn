@@ -22,20 +22,20 @@ repeat_times = 11
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/backback" unique_id=239973628]
 modulate = Color(0.32544068, 0.32544094, 0.32544088, 1)
-position = Vector2(21.579586, 112.750015)
+position = Vector2(1110.2314, 1130)
 scale = Vector2(0.47231126, 0.4677083)
 texture = ExtResource("9_vtaks")
 
 [node name="foreback" type="Parallax2D" parent="ParallaxBackground" unique_id=549471647]
 scroll_scale = Vector2(0.2, 0.15)
-scroll_offset = Vector2(2755, 2742)
-repeat_size = Vector2(385, 385)
+scroll_offset = Vector2(546, 523)
+repeat_size = Vector2(480, 480)
 repeat_times = 11
 limit_begin = Vector2(-10000000, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/foreback" unique_id=909765051]
 modulate = Color(0.4178962, 0.41789624, 0.41789606, 1)
-position = Vector2(429.15625, 531.8438)
+position = Vector2(1105, 993)
 texture = ExtResource("10_kvpfn")
 
 [node name="Levels" type="Node" parent="." unique_id=1196495851]

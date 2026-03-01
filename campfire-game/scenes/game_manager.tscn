@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://do25iaac5oj1"]
 
 [ext_resource type="Script" uid="uid://8swq1hgamljs" path="res://scripts/GameManager.gd" id="1_hwd4i"]
+[ext_resource type="AudioStream" uid="uid://d4fefj8prqa2x" path="res://sounds/sfx_-_death_explosion.ogg" id="2_glms7"]
 
 [node name="GameManager" type="Node" unique_id=671649569]
 script = ExtResource("1_hwd4i")
@@ -16,3 +17,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="." unique_id=1409561204]
+stream = ExtResource("2_glms7")
