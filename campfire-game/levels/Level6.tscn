@@ -1,40 +1,38 @@
-[gd_scene format=3 uid="uid://cg5mv20pbep60"]
+[gd_scene format=3 uid="uid://bc07g7y01iieo"]
 
-[ext_resource type="PackedScene" uid="uid://n6n6brl24fak" path="res://scenes/player.tscn" id="1_v0vb7"]
-[ext_resource type="Texture2D" uid="uid://d2l65nufxlbcb" path="res://assets/world/ground/sprite_0.png" id="2_lsgss"]
-[ext_resource type="PackedScene" uid="uid://bj8lwee6y7ken" path="res://scenes/spikes.tscn" id="2_vnf24"]
-[ext_resource type="Texture2D" uid="uid://bp8m8hip0n7bo" path="res://assets/world/ground/sprite_1.png" id="3_sd6f7"]
-[ext_resource type="Texture2D" uid="uid://ccs7rrbftndvm" path="res://assets/world/ground/sprite_2.png" id="4_vnf24"]
-[ext_resource type="Texture2D" uid="uid://oli2kh8ldir3" path="res://assets/world/ground/sprite_3.png" id="5_pm1y0"]
-[ext_resource type="PackedScene" uid="uid://chjucrhp8suxt" path="res://scenes/lamp.tscn" id="6_2eb3b"]
-[ext_resource type="Texture2D" uid="uid://dwn4iyfgejxv2" path="res://assets/world/ground/ground tile6.png" id="7_2eb3b"]
-[ext_resource type="PackedScene" uid="uid://crwdiv87egxxc" path="res://scenes/sign.tscn" id="7_kykwg"]
-[ext_resource type="Texture2D" uid="uid://cj3ie0gcwwjbw" path="res://assets/world/backdrop/parallax/sprite_1.png" id="7_pm1y0"]
-[ext_resource type="Texture2D" uid="uid://br88nloi11wxw" path="res://assets/world/backdrop/parallax/sprite_0.png" id="8_2eb3b"]
-[ext_resource type="PackedScene" uid="uid://boh0shnpw50u5" path="res://scenes/killzone.tscn" id="8_iyn63"]
-[ext_resource type="Texture2D" uid="uid://1x25blb6emx2" path="res://assets/world/ground/ground tile7.png" id="8_kykwg"]
-[ext_resource type="FontFile" uid="uid://cynh1uqfwsbfs" path="res://fonts/Boxy-Bold-Font/Boxy-Bold.ttf" id="9_1ix84"]
+[ext_resource type="PackedScene" uid="uid://n6n6brl24fak" path="res://scenes/player.tscn" id="1_nd10q"]
+[ext_resource type="PackedScene" uid="uid://bj8lwee6y7ken" path="res://scenes/spikes.tscn" id="2_ploog"]
+[ext_resource type="Texture2D" uid="uid://d2l65nufxlbcb" path="res://assets/world/ground/sprite_0.png" id="3_j0nb6"]
+[ext_resource type="Texture2D" uid="uid://bp8m8hip0n7bo" path="res://assets/world/ground/sprite_1.png" id="4_vxlmw"]
+[ext_resource type="Texture2D" uid="uid://ccs7rrbftndvm" path="res://assets/world/ground/sprite_2.png" id="5_8vy3l"]
+[ext_resource type="Texture2D" uid="uid://oli2kh8ldir3" path="res://assets/world/ground/sprite_3.png" id="6_8uipk"]
+[ext_resource type="Texture2D" uid="uid://dwn4iyfgejxv2" path="res://assets/world/ground/ground tile6.png" id="7_f8yid"]
+[ext_resource type="Texture2D" uid="uid://1x25blb6emx2" path="res://assets/world/ground/ground tile7.png" id="8_epgce"]
+[ext_resource type="PackedScene" uid="uid://chjucrhp8suxt" path="res://scenes/lamp.tscn" id="9_isatf"]
+[ext_resource type="PackedScene" uid="uid://crwdiv87egxxc" path="res://scenes/sign.tscn" id="10_kq5qc"]
+[ext_resource type="PackedScene" uid="uid://boh0shnpw50u5" path="res://scenes/killzone.tscn" id="11_mfj1v"]
+[ext_resource type="Script" uid="uid://o5xtsvpj68vx" path="res://scripts/level_end_trigger.gd" id="12_ploog"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_kykwg"]
-scenes/1/scene = ExtResource("2_vnf24")
+scenes/1/scene = ExtResource("2_ploog")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v2r1a"]
-texture = ExtResource("2_lsgss")
+texture = ExtResource("3_j0nb6")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1gkwy"]
-texture = ExtResource("3_sd6f7")
+texture = ExtResource("4_vxlmw")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rge87"]
-texture = ExtResource("4_vnf24")
+texture = ExtResource("5_8vy3l")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_emhfo"]
-texture = ExtResource("5_pm1y0")
+texture = ExtResource("6_8uipk")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
@@ -799,7 +797,7 @@ texture = SubResource("CompressedTexture2D_dinhu")
 29:29/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iyn63"]
-texture = ExtResource("7_2eb3b")
+texture = ExtResource("7_f8yid")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -818,7 +816,7 @@ texture = ExtResource("7_2eb3b")
 3:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1ix84"]
-texture = ExtResource("8_kykwg")
+texture = ExtResource("8_epgce")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -849,15 +847,14 @@ sources/7 = SubResource("TileSetAtlasSource_1ix84")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0g6gi"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_0g6gi"]
-font = ExtResource("9_1ix84")
-font_size = 8
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j0nb6"]
+size = Vector2(285, 188)
 
-[node name="Level5" type="Node2D" unique_id=1300058714]
+[node name="Level6" type="Node2D" unique_id=1300058714]
 
-[node name="Player" parent="." unique_id=1307399855 instance=ExtResource("1_v0vb7")]
+[node name="Player" parent="." unique_id=1307399855 instance=ExtResource("1_nd10q")]
 z_index = 1
-position = Vector2(48, -15)
+position = Vector2(6162, 322)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1303355900]
 zoom = Vector2(2, 2)
@@ -872,66 +869,26 @@ layer_0/tile_data = PackedInt32Array(131069, 4, 0, 131070, 4, 0, 131071, 4, 0, 6
 layer_1/name = "Spikes"
 layer_2/name = "background"
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="TileMap" unique_id=443495194]
-follow_viewport_enabled = true
-
-[node name="backback" type="Parallax2D" parent="TileMap/ParallaxBackground" unique_id=326283351]
-scale = Vector2(1.007898, 1)
-scroll_scale = Vector2(0.1, 0.75)
-repeat_size = Vector2(224, 224)
-repeat_times = 15
-
-[node name="Sprite2D" type="Sprite2D" parent="TileMap/ParallaxBackground/backback" unique_id=32031241]
-modulate = Color(0.23826203, 0.23826227, 0.23826212, 1)
-position = Vector2(21.579586, 112.750015)
-scale = Vector2(0.47231126, 0.4677083)
-texture = ExtResource("7_pm1y0")
-
-[node name="foreback" type="Parallax2D" parent="TileMap/ParallaxBackground" unique_id=1997509547]
-scroll_scale = Vector2(0.2, 0.15)
-scroll_offset = Vector2(2755, 2742)
-repeat_size = Vector2(385, 385)
-repeat_times = 15
-limit_begin = Vector2(-10000000, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="TileMap/ParallaxBackground/foreback" unique_id=541294156]
-modulate = Color(0.39536718, 0.3953672, 0.39536706, 1)
-position = Vector2(434.00003, 520)
-scale = Vector2(0.8076823, 0.80898416)
-texture = ExtResource("8_2eb3b")
-
-[node name="Lamp" parent="." unique_id=1425322240 instance=ExtResource("6_2eb3b")]
+[node name="Lamp" parent="." unique_id=1425322240 instance=ExtResource("9_isatf")]
 position = Vector2(0, -34)
 
-[node name="Sign" parent="." unique_id=314502426 instance=ExtResource("7_kykwg")]
+[node name="Sign" parent="." unique_id=314502426 instance=ExtResource("10_kq5qc")]
 position = Vector2(3340, 369)
 dialog_lines = Array[String](["Just jump bro...", "There's no way upward..."])
 
-[node name="Killzone" parent="." unique_id=1219585669 instance=ExtResource("8_iyn63")]
+[node name="Killzone" parent="." unique_id=1219585669 instance=ExtResource("11_mfj1v")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=2129044926]
 position = Vector2(820, 1101)
 scale = Vector2(12.359999, 3.3199975)
 shape = SubResource("WorldBoundaryShape2D_0g6gi")
 
-[node name="Labels" type="Node" parent="." unique_id=322121996]
+[node name="LevelEndTrigger" type="Area2D" parent="." unique_id=1655130968]
+position = Vector2(2805, 1123)
+script = ExtResource("12_ploog")
 
-[node name="Label" type="Label" parent="Labels" unique_id=1604756358]
-offset_left = 34.0
-offset_top = -95.0
-offset_right = 104.0
-offset_bottom = -86.0
-text = "A/D to move.."
-label_settings = SubResource("LabelSettings_0g6gi")
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelEndTrigger" unique_id=1614617792]
+position = Vector2(3587, -802)
+shape = SubResource("RectangleShape2D_j0nb6")
 
-[node name="Label2" type="Label" parent="Labels" unique_id=890617694]
-offset_left = 212.0
-offset_top = -66.0
-offset_right = 324.0
-offset_bottom = -57.0
-text = "W or Space to jump.."
-label_settings = SubResource("LabelSettings_0g6gi")
-horizontal_alignment = 1
-vertical_alignment = 1
+[connection signal="body_entered" from="LevelEndTrigger" to="LevelEndTrigger" method="_on_body_entered"]

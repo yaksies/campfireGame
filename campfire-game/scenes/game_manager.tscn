@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://do25iaac5oj1"]
+
+[ext_resource type="Script" uid="uid://8swq1hgamljs" path="res://scripts/GameManager.gd" id="1_hwd4i"]
+
+[node name="GameManager" type="Node" unique_id=671649569]
+script = ExtResource("1_hwd4i")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1045483316]
+layer = 10
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=631683625]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

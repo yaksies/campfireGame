@@ -1,13 +1,11 @@
 [gd_scene format=3 uid="uid://bpne6t7un7wam"]
 
-[ext_resource type="PackedScene" uid="uid://dcjd0ky6v84tc" path="res://scenes/levels/level7.tscn" id="1_lbhrr"]
+[ext_resource type="Script" uid="uid://bjjqxw1lcoyva" path="res://scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://cj3ie0gcwwjbw" path="res://assets/world/backdrop/parallax/sprite_1.png" id="9_vtaks"]
 [ext_resource type="Texture2D" uid="uid://br88nloi11wxw" path="res://assets/world/backdrop/parallax/sprite_0.png" id="10_kvpfn"]
 
 [node name="Game" type="Node2D" unique_id=589451270]
-
-[node name="LevelSeven" parent="." unique_id=1300058714 instance=ExtResource("1_lbhrr")]
-position = Vector2(6.213623, 10.932404)
+script = ExtResource("1_lnu2h")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=345183695]
 position = Vector2(146, -11)
@@ -39,3 +37,5 @@ limit_begin = Vector2(-10000000, 0)
 modulate = Color(0.4178962, 0.41789624, 0.41789606, 1)
 position = Vector2(429.15625, 531.8438)
 texture = ExtResource("10_kvpfn")
+
+[node name="Levels" type="Node" parent="." unique_id=1196495851]
