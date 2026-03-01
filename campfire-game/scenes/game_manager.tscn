@@ -3,10 +3,13 @@
 [ext_resource type="Script" uid="uid://8swq1hgamljs" path="res://scripts/GameManager.gd" id="1_hwd4i"]
 [ext_resource type="AudioStream" uid="uid://d4fefj8prqa2x" path="res://sounds/sfx_-_death_explosion.ogg" id="2_glms7"]
 [ext_resource type="FontFile" uid="uid://cynh1uqfwsbfs" path="res://fonts/Boxy-Bold-Font/Boxy-Bold.ttf" id="2_udu3i"]
+[ext_resource type="AudioStream" uid="uid://dvgpameefbjwj" path="res://sounds/City-of-the-Disturbed.mp3" id="4_oo155"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_oo155"]
 font = ExtResource("2_udu3i")
 font_size = 61
+font_color = Color(0.103288315, 0.37929884, 0.77485967, 1)
+outline_color = Color(0, 0, 0, 1)
 
 [node name="GameManager" type="Node" unique_id=671649569]
 script = ExtResource("1_hwd4i")
@@ -24,6 +27,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="TitleLabel" type="Label" parent="CanvasLayer" unique_id=789895827]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -41,5 +45,26 @@ label_settings = SubResource("LabelSettings_oo155")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="AscendButton" type="Button" parent="CanvasLayer" unique_id=700970359]
+visible = false
+anchors_preset = -1
+anchor_left = 0.499
+anchor_top = 0.632
+anchor_right = 0.499
+anchor_bottom = 0.632
+offset_left = -46.04001
+offset_top = -13.280029
+offset_right = 40.95999
+offset_bottom = 17.71997
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_udu3i")
+text = "Ascend"
+
 [node name="DeathSound" type="AudioStreamPlayer" parent="." unique_id=1409561204]
 stream = ExtResource("2_glms7")
+
+[node name="BGMPlayer" type="AudioStreamPlayer" parent="." unique_id=1985836789]
+stream = ExtResource("4_oo155")
+
+[connection signal="pressed" from="CanvasLayer/AscendButton" to="." method="_on_ascend_button_pressed"]

@@ -5,7 +5,10 @@ var level_container : Node
 var current_level_instance : Node 
 
 @onready var color_rect = $CanvasLayer/ColorRect
-@onready var death_sound = $DeathSound 
+@onready var death_sound = $DeathSound
+@onready var title_label = $CanvasLayer/TitleLabel
+@onready var ascend_button = $CanvasLayer/AscendButton
+@onready var bgm_player = $BGMPlayer
 
 func _ready():
 	# Tell this specific node to NEVER stop processing, even if the game is paused
@@ -93,3 +96,55 @@ func load_level_instance(level_num: int):
 		level_container.add_child(current_level_instance)
 	else:
 		print("ERROR: Could not load level at path: ", level_path)
+		
+		# --- CINEMATIC ENDING ---
+# --- CINEMATIC ENDING ---
+func trigger_ending():
+	color_rect.color = Color(1.0, 1.0, 1.0)
+	color_rect.modulate.a = 0.0
+	color_rect.show()
+	
+	title_label.modulate.a = 0.0
+	title_label.show()
+	
+	ascend_button.modulate.a = 0.0
+	ascend_button.show()
+	
+	# 1. Fade screen to white
+	var white_tween = create_tween()
+	white_tween.tween_property(color_rect, "modulate:a", 1.0, 3.0)
+	
+	# 2. Fade out music at the exact same time
+	# In Godot, -80 decibels (db) is total silence
+	if bgm_player.playing:
+		var audio_tween = create_tween()
+		audio_tween.tween_property(bgm_player, "volume_db", -80.0, 3.0)
+		
+	# Wait for the 3-second white screen fade to finish
+	await white_tween.finished 
+	
+	# 3. Freeze the game so they can't walk off a cliff
+	get_tree().paused = true
+	
+	# Stop the audio player completely now that it's silent
+	bgm_player.stop()
+	
+	# 4. Wait for a dramatic 1.5 seconds in pure silence
+	await get_tree().create_timer(1.5).timeout
+	
+	# 5. Fade in the game title (takes 2 seconds)
+	var text_tween = create_tween()
+	text_tween.tween_property(title_label, "modulate:a", 1.0, 2.0)
+	await text_tween.finished
+	
+	# 6. Wait another 1.5 seconds after the title appears
+	await get_tree().create_timer(1.5).timeout
+	
+	# 7. Fade in the Ascend button (takes 1.5 seconds)
+	var button_tween = create_tween()
+	button_tween.tween_property(ascend_button, "modulate:a", 1.0, 1.5)
+	await button_tween.finished
+
+
+func _on_ascend_button_pressed() -> void:
+	get_tree().quit() # Replace with function body.

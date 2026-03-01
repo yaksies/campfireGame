@@ -3,11 +3,11 @@ extends Area2D
 @onready var timer: Timer = $Timer
 
 func _on_body_entered(body: Node2D) -> void:
-<<<<<<< HEAD
+
 	
 	timer.start()
 
-=======
+
 	# 1. Check if the body is actually the player (prevents slimes killing slimes)
 	if body.name == "Player":
 		print("You died!")
@@ -27,7 +27,7 @@ func _on_body_entered(body: Node2D) -> void:
 			body.die()
 			
 		timer.start()
->>>>>>> 89a09c0997ca2725a00d7b64a9444cc57ddc9b87
+
 
 func _on_timer_timeout() -> void:
 	Engine.time_scale = 1.0
