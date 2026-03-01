@@ -32,7 +32,8 @@ func _on_type_timer_timeout():
 		
 		# A pro trick: randomly shift the pitch slightly every letter 
 		# so the sound effect doesn't feel like a repetitive machine gun
-		type_sound.pitch_scale = randf_range(0.8, 1.4)
+		type_sound.pitch_scale = randf_range(0.8
+	, 1.4)
 		type_sound.play()
 	else:
 		finish_typing()
