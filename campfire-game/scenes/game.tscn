@@ -47,9 +47,6 @@ repeat_times = 11
 limit_begin = Vector2(-10000000, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/foreback" unique_id=909765051]
-
 modulate = Color(0.4178962, 0.41789624, 0.41789606, 1)
 position = Vector2(429.15625, 531.8438)
->>>>>>> 7693cd36861644646f7da829bec149e1ca686095
-scale = Vector2(0.8076823, 0.80898416)
 texture = ExtResource("10_kvpfn")
