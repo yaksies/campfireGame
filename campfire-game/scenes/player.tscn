@@ -24,8 +24,8 @@
 [ext_resource type="Texture2D" uid="uid://ddl86ysae1m3q" path="res://assets/player/player-walk/sprite_1.png" id="21_ujl30"]
 [ext_resource type="Texture2D" uid="uid://c0mles78n2w7p" path="res://assets/player/player-walk/sprite_2.png" id="22_31cv2"]
 [ext_resource type="Texture2D" uid="uid://b0785ik5jgilw" path="res://assets/player/player-walk/sprite_3.png" id="23_pf23h"]
-[ext_resource type="AudioStream" uid="uid://bhc1qrt1mvswy" path="res://assets/player/player-walk/stepdirt_3.wav" id="25_ke2ow"]
-[ext_resource type="AudioStream" uid="uid://6tdr5e35rxkh" path="res://assets/player/player-jump/264828__cmdrobot__text-message-or-videogame-jump.ogg" id="26_ujl30"]
+[ext_resource type="AudioStream" uid="uid://bhc1qrt1mvswy" path="res://sounds/stepdirt_3.wav" id="25_ke2ow"]
+[ext_resource type="AudioStream" uid="uid://6tdr5e35rxkh" path="res://sounds/264828__cmdrobot__text-message-or-videogame-jump.ogg" id="26_ujl30"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dqkch"]
 animations = [{

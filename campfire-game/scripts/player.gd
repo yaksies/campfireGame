@@ -3,6 +3,7 @@ extends CharacterBody2D
 const SPEED = 150.0
 const JUMP_VELOCITY = -320.00
 
+
 # --- AUDIO SETTINGS ---
 @onready var footstep_sound: AudioStreamPlayer2D = $FootstepSound
 @onready var jump_sound: AudioStreamPlayer2D = $JumpSound # Add this line

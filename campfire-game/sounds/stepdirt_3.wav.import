@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bhc1qrt1mvswy"
-path="res://.godot/imported/stepdirt_3.wav-164c8d99ddc342df6f9a31bd0e7d295e.sample"
+path="res://.godot/imported/stepdirt_3.wav-b16e60b874de8f8f18ac350aeb96740d.sample"
 
 [deps]
 
-source_file="res://assets/player/player-walk/stepdirt_3.wav"
-dest_files=["res://.godot/imported/stepdirt_3.wav-164c8d99ddc342df6f9a31bd0e7d295e.sample"]
+source_file="res://sounds/stepdirt_3.wav"
+dest_files=["res://.godot/imported/stepdirt_3.wav-b16e60b874de8f8f18ac350aeb96740d.sample"]
 
 [params]
 
