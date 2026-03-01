@@ -22,7 +22,7 @@ func _on_body_exited(body):
 		can_interact = false
 
 func _unhandled_input(event):
-	# If the player is close enough and presses E
 	if can_interact and event.is_action_pressed("interact"):
-		# Call our global Autoloaded UI and pass this specific sign's text
+		print("E key was detected by the Sign!") # <--- ADD THIS
 		DialogueUI.start_dialogue(sign_text)
+		get_viewport().set_input_as_handled() # Prevents the input from triggering other things
