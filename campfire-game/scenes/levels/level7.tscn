@@ -804,7 +804,7 @@ sources/5 = SubResource("TileSetAtlasSource_l0cwd")
 font = ExtResource("8_yu5ka")
 font_size = 8
 
-[node name="LevelSeven" type="Node2D" unique_id=1300058714]
+[node name="Level7" type="Node2D" unique_id=1300058714]
 
 [node name="Player" parent="." unique_id=1307399855 instance=ExtResource("1_mnr30")]
 z_index = 1
