@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bj8lwee6y7ken"]
 
-[ext_resource type="Script" uid="uid://jqcvp8rgl8g2" path="res://scenes/spikes.gd" id="1_xbcdo"]
+[ext_resource type="Script" uid="uid://dsjsxvmfi5dhu" path="res://scenes/spikes.gd" id="1_xbcdo"]
 [ext_resource type="Texture2D" uid="uid://d70u8aqtubop" path="res://assets/world/ground/dripstone1.png" id="2_bflj7"]
 
 [node name="Spikes" type="Area2D" unique_id=291239976]
