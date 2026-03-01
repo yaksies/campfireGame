@@ -854,10 +854,13 @@ size = Vector2(285, 188)
 
 [node name="Player" parent="." unique_id=1307399855 instance=ExtResource("1_8ln3t")]
 z_index = 1
-position = Vector2(6142, 331)
+position = Vector2(46, -14)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1303355900]
+position = Vector2(10, -2)
 zoom = Vector2(2, 2)
+limit_left = -150
+limit_right = 6289
 position_smoothing_enabled = true
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1872555788]
