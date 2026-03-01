@@ -23,7 +23,6 @@ buses/default_bus_layout="uid://bijc6gmyw8h2x"
 
 DialogueUI="*uid://btqb11iwbukg5"
 MusicPlayer="*uid://byyn06n323mb0"
-PauseMenu="*uid://c20if61vqaoo8"
 
 [dotnet]
 

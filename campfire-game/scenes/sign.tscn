@@ -13,7 +13,6 @@ font_size = 12
 
 [node name="Sign" type="Area2D" unique_id=314502426]
 script = ExtResource("1_8yyji")
-sign_text = null
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1312121984]
 texture = ExtResource("1_shbub")
