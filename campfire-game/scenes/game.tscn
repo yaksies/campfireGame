@@ -9,7 +9,7 @@ script = ExtResource("1_lnu2h")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=345183695]
 position = Vector2(146, -11)
-color = Color(0.11489672, 0.11489683, 0.11489678, 1)
+color = Color(0, 0, 0, 1)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1142850047]
 follow_viewport_enabled = true
