@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://dcjd0ky6v84tc"]
 
 [ext_resource type="Texture2D" uid="uid://d2l65nufxlbcb" path="res://assets/world/ground/sprite_0.png" id="1_268cy"]
+[ext_resource type="PackedScene" uid="uid://n6n6brl24fak" path="res://scenes/player.tscn" id="1_mnr30"]
 [ext_resource type="Texture2D" uid="uid://bp8m8hip0n7bo" path="res://assets/world/ground/sprite_1.png" id="2_adc7d"]
 [ext_resource type="Texture2D" uid="uid://ccs7rrbftndvm" path="res://assets/world/ground/sprite_2.png" id="3_mnr30"]
 [ext_resource type="Texture2D" uid="uid://oli2kh8ldir3" path="res://assets/world/ground/sprite_3.png" id="4_yu5ka"]
 [ext_resource type="PackedScene" uid="uid://chjucrhp8suxt" path="res://scenes/lamp.tscn" id="5_0g6gi"]
 [ext_resource type="PackedScene" uid="uid://crwdiv87egxxc" path="res://scenes/sign.tscn" id="6_adc7d"]
+[ext_resource type="PackedScene" uid="uid://boh0shnpw50u5" path="res://scenes/killzone.tscn" id="8_0g6gi"]
+[ext_resource type="FontFile" uid="uid://cynh1uqfwsbfs" path="res://fonts/Boxy-Bold-Font/Boxy-Bold.ttf" id="8_yu5ka"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v2r1a"]
 texture = ExtResource("1_268cy")
@@ -795,7 +798,21 @@ sources/3 = SubResource("TileSetAtlasSource_rge87")
 sources/4 = SubResource("TileSetAtlasSource_emhfo")
 sources/5 = SubResource("TileSetAtlasSource_l0cwd")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0g6gi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0g6gi"]
+font = ExtResource("8_yu5ka")
+font_size = 8
+
 [node name="LevelSeven" type="Node2D" unique_id=1300058714]
+
+[node name="Player" parent="." unique_id=1307399855 instance=ExtResource("1_mnr30")]
+z_index = 1
+position = Vector2(48, -15)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1303355900]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1872555788]
 scale = Vector2(2, 2)
@@ -806,8 +823,37 @@ layer_0/tile_data = PackedInt32Array(131069, 4, 0, 131070, 4, 0, 131071, 4, 0, 6
 layer_1/name = "background"
 
 [node name="Lamp" parent="." unique_id=1425322240 instance=ExtResource("5_0g6gi")]
-position = Vector2(66, -36)
+position = Vector2(0, -34)
 
 [node name="Sign" parent="." unique_id=314502426 instance=ExtResource("6_adc7d")]
 position = Vector2(1164, 370)
-sign_text = "Hi there!"
+dialog_lines = Array[String](["Just jump bro...", "There's no way upward..."])
+
+[node name="Killzone" parent="." unique_id=1219585669 instance=ExtResource("8_0g6gi")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=2129044926]
+position = Vector2(820, 1101)
+scale = Vector2(12.359999, 3.3199975)
+shape = SubResource("WorldBoundaryShape2D_0g6gi")
+
+[node name="Labels" type="Node" parent="." unique_id=322121996]
+
+[node name="Label" type="Label" parent="Labels" unique_id=1604756358]
+offset_left = 34.0
+offset_top = -95.0
+offset_right = 104.0
+offset_bottom = -86.0
+text = "A/D to move.."
+label_settings = SubResource("LabelSettings_0g6gi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Labels" unique_id=890617694]
+offset_left = 212.0
+offset_top = -66.0
+offset_right = 324.0
+offset_bottom = -57.0
+text = "W or Space to jump.."
+label_settings = SubResource("LabelSettings_0g6gi")
+horizontal_alignment = 1
+vertical_alignment = 1
