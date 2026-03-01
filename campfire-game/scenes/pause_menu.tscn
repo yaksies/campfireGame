@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-[gd_scene format=3 uid="uid://bclpdt5htd3k2"]
-
-[ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_myx47"]
-=======
 [gd_scene format=3 uid="uid://c20if61vqaoo8"]
 
 [ext_resource type="Script" uid="uid://dinyas5ado2iw" path="res://pause_menu.gd" id="1_myx47"]
->>>>>>> parent of d6864d2 (Revert "Merge branch 'main' of https://github.com/yaksies/campfireGame")
 [ext_resource type="FontFile" uid="uid://cynh1uqfwsbfs" path="res://fonts/Boxy-Bold-Font/Boxy-Bold.ttf" id="2_kukqi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5d2l8"]
