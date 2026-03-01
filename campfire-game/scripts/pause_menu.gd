@@ -1,7 +1,7 @@
 extends CanvasLayer
 
-@onready var main_menu = $MainMenu
-@onready var settings_menu = $SettingsMenu
+@onready var main_menu: Control = $MainMenu
+@onready var settings_menu: Control = $SettingsMenu
 
 # Sliders
 @onready var master_slider = $SettingsMenu/VBoxContainer/MasterSlider
@@ -16,7 +16,7 @@ var music_bus = AudioServer.get_bus_index("Music")
 var sfx_bus = AudioServer.get_bus_index("SFX")
 
 func _ready():
-	hide() 
+	hide()
 	settings_menu.hide()
 	load_settings()
 	
