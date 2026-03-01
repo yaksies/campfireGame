@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://3s5eg24b8weg"]
+[gd_scene format=3 uid="uid://c20if61vqaoo8"]
 
 [ext_resource type="Script" uid="uid://dinyas5ado2iw" path="res://scripts/pause_menu.gd" id="1_myx47"]
 [ext_resource type="FontFile" uid="uid://cynh1uqfwsbfs" path="res://fonts/Boxy-Bold-Font/Boxy-Bold.ttf" id="2_kukqi"]
