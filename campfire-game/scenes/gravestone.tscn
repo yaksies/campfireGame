@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://ec2b3eiacrls"]
+
+[ext_resource type="Script" uid="uid://cpcadddxjj7tp" path="res://scripts/sign.gd" id="1_ouad5"]
+[ext_resource type="Texture2D" uid="uid://cle1xhcbxk55n" path="res://assets/world/gravestone.png" id="2_ouad5"]
+[ext_resource type="FontFile" uid="uid://cynh1uqfwsbfs" path="res://fonts/Boxy-Bold-Font/Boxy-Bold.ttf" id="3_suqsr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kd50q"]
+radius = 29.017237
+
+[sub_resource type="LabelSettings" id="LabelSettings_ge2pc"]
+font = ExtResource("3_suqsr")
+font_size = 12
+
+[node name="Gravestone" type="Area2D" unique_id=314502426]
+script = ExtResource("1_ouad5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1312121984]
+position = Vector2(0.12499642, 0.12500453)
+scale = Vector2(0.10351563, 0.11393227)
+texture = ExtResource("2_ouad5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1039464696]
+shape = SubResource("CircleShape2D_kd50q")
+
+[node name="Label" type="Label" parent="." unique_id=1485625251]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -59.0
+offset_right = 41.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "E TO READ"
+label_settings = SubResource("LabelSettings_ge2pc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
