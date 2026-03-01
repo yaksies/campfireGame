@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://c20if61vqaoo8"]
+
+[ext_resource type="Script" uid="uid://dinyas5ado2iw" path="res://pause_menu.gd" id="1_myx47"]
+[ext_resource type="FontFile" uid="uid://cynh1uqfwsbfs" path="res://fonts/Boxy-Bold-Font/Boxy-Bold.ttf" id="2_kukqi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5d2l8"]
+font = ExtResource("2_kukqi")
+font_size = 64
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=465966794]
+process_mode = 3
+script = ExtResource("1_myx47")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=456434960]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.39215687)
+
+[node name="MainMenu" type="Control" parent="." unique_id=2109631180]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResumeButton" type="VBoxContainer" parent="MainMenu" unique_id=1302037628]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MainMenu/ResumeButton" unique_id=1356710233]
+layout_mode = 2
+text = "PAUSE"
+label_settings = SubResource("LabelSettings_5d2l8")
+
+[node name="Resume" type="Button" parent="MainMenu/ResumeButton" unique_id=1805287975]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kukqi")
+text = "RESUME"
+
+[node name="SettingsMenu" type="Button" parent="MainMenu/ResumeButton" unique_id=443014848]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kukqi")
+text = "Settings"
+
+[node name="ExitButton" type="Button" parent="MainMenu/ResumeButton" unique_id=1496494850]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kukqi")
+text = "EXIT"
+
+[node name="SettingsMenu" type="Control" parent="." unique_id=420222008]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsMenu" unique_id=1331793364]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Audio Settings" type="Label" parent="SettingsMenu/VBoxContainer" unique_id=1087482159]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kukqi")
+theme_override_font_sizes/font_size = 64
+text = "AUDIO SETTINGS"
+
+[node name="Master" type="Label" parent="SettingsMenu/VBoxContainer" unique_id=728005714]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kukqi")
+text = "MASTER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MasterSlider" type="HSlider" parent="SettingsMenu/VBoxContainer" unique_id=318234689]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
+[node name="Music" type="Label" parent="SettingsMenu/VBoxContainer" unique_id=84538354]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kukqi")
+text = "MUSIC"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="SettingsMenu/VBoxContainer" unique_id=1093427567]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
+[node name="SFX" type="Label" parent="SettingsMenu/VBoxContainer" unique_id=1172738249]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kukqi")
+text = "SFX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFXSlider" type="HSlider" parent="SettingsMenu/VBoxContainer" unique_id=2091302617]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
+[node name="BackButton" type="Button" parent="SettingsMenu/VBoxContainer" unique_id=731994324]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kukqi")
+text = "BACK"
+
+[connection signal="pressed" from="MainMenu/ResumeButton/Resume" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="MainMenu/ResumeButton/SettingsMenu" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="MainMenu/ResumeButton/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="value_changed" from="SettingsMenu/VBoxContainer/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="SettingsMenu/VBoxContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="SettingsMenu/VBoxContainer/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="SettingsMenu/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
