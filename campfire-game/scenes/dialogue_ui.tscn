@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://btqb11iwbukg5"]
+
+[ext_resource type="Script" uid="uid://b8s874257ax3e" path="res://scripts/dialogue_ui.gd" id="1_dwk8m"]
+
+[node name="DialogueUI" type="CanvasLayer" unique_id=1346528937]
+script = ExtResource("1_dwk8m")
+
+[node name="Panel" type="Panel" parent="." unique_id=2013173235]
+anchors_preset = -1
+anchor_top = 0.002
+anchor_bottom = 0.002
+offset_left = -27.0
+offset_top = -23.296
+offset_right = 25.0
+offset_bottom = 23.704
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel" unique_id=515434463]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TypeTimer" type="Timer" parent="." unique_id=259280297]
+wait_time = 0.05
+
+[connection signal="timeout" from="TypeTimer" to="." method="_on_type_timer_timeout"]
