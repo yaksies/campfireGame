@@ -19,7 +19,7 @@ follow_viewport_enabled = true
 scale = Vector2(1.007898, 1)
 scroll_scale = Vector2(0.1, 0.075)
 repeat_size = Vector2(224, 224)
-repeat_times = 11
+repeat_times = 90
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/backback" unique_id=239973628]
 modulate = Color(0.446777, 0.44677705, 0.44677693, 1)
@@ -31,7 +31,7 @@ texture = ExtResource("9_vtaks")
 scroll_scale = Vector2(0.2, 0.15)
 scroll_offset = Vector2(546, 523)
 repeat_size = Vector2(480, 480)
-repeat_times = 11
+repeat_times = 60
 limit_begin = Vector2(-10000000, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/foreback" unique_id=909765051]
