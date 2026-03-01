@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dwn4iyfgejxv2" path="res://assets/world/ground/ground tile6.png" id="7_k6i8e"]
 [ext_resource type="Texture2D" uid="uid://1x25blb6emx2" path="res://assets/world/ground/ground tile7.png" id="8_bf3ww"]
 [ext_resource type="PackedScene" uid="uid://chjucrhp8suxt" path="res://scenes/lamp.tscn" id="9_vej6f"]
+[ext_resource type="PackedScene" uid="uid://dt8aqpj5t7a6f" path="res://scenes/slome.tscn" id="10_4hkux"]
 [ext_resource type="PackedScene" uid="uid://crwdiv87egxxc" path="res://scenes/sign.tscn" id="10_kwmjv"]
 [ext_resource type="PackedScene" uid="uid://boh0shnpw50u5" path="res://scenes/killzone.tscn" id="11_0suqg"]
 [ext_resource type="Script" uid="uid://o5xtsvpj68vx" path="res://scripts/level_end_trigger.gd" id="12_2v8bv"]
@@ -874,6 +875,27 @@ layer_2/name = "background"
 
 [node name="Lamp" parent="." unique_id=1425322240 instance=ExtResource("9_vej6f")]
 position = Vector2(0, -34)
+
+[node name="Slome" parent="." unique_id=1961024838 instance=ExtResource("10_4hkux")]
+position = Vector2(1234, 408)
+
+[node name="Slome2" parent="." unique_id=1144404513 instance=ExtResource("10_4hkux")]
+position = Vector2(1560, 408)
+
+[node name="Slome3" parent="." unique_id=594714454 instance=ExtResource("10_4hkux")]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(1424, 408)
+
+[node name="Slome4" parent="." unique_id=1501593435 instance=ExtResource("10_4hkux")]
+modulate = Color(1, 0.07058824, 0.07058824, 1)
+position = Vector2(1782, 408)
+
+[node name="Slome5" parent="." unique_id=258755956 instance=ExtResource("10_4hkux")]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(1956, 408)
+
+[node name="Slome6" parent="." unique_id=2030126197 instance=ExtResource("10_4hkux")]
+position = Vector2(1863, 408)
 
 [node name="Sign" parent="." unique_id=314502426 instance=ExtResource("10_kwmjv")]
 position = Vector2(3340, 369)
