@@ -19,10 +19,11 @@ func _ready():
 	hide() 
 	settings_menu.hide()
 	load_settings()
-
+	
 func _input(event):
 	if event.is_action_pressed("pause"):
 		toggle_pause()
+		
 
 func toggle_pause():
 	# If the game is currently unpaused, pause it. If paused, unpause it.
