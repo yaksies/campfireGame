@@ -1,27 +1,68 @@
 extends CanvasLayer
 
-@onready var panel: Panel = $Panel
-@onready var label: RichTextLabel = $Panel/RichTextLabel
-@onready var type_timer: Timer = $TypeTimer
+@onready var panel = $Panel
+@onready var label = $Panel/RichTextLabel
+@onready var type_timer = $TypeTimer
+
+var lines_queue: Array[String] = []
+var current_line_index: int = 0
+var is_typing: bool = false
 
 func _ready():
-	panel.hide() # Hide UI when the game starts
+	panel.hide()
 
-# Other scenes will call this function and pass their specific text
-func start_dialogue(text: String):
-	label.text = text
-	label.visible_characters = 0 # Hide all text initially
+func start_dialogue(lines: Array[String]):
+	if panel.visible: return 
+	
+	lines_queue = lines
+	current_line_index = 0
 	panel.show()
+	show_current_line()
+
+func show_current_line():
+	is_typing = true
+	label.text = lines_queue[current_line_index]
+	label.visible_characters = 0
 	type_timer.start()
 
-# Connect the Timer's 'timeout' signal to this function
 func _on_type_timer_timeout():
 	if label.visible_characters < label.text.length():
 		label.visible_characters += 1
 	else:
-		type_timer.stop()
+		finish_typing()
 
-func _unhandled_input(event):
-	# Close the dialogue if we press E again after the text finishes typing
-	if event.is_action_pressed("interact") and panel.visible and type_timer.is_stopped():
+func finish_typing():
+	type_timer.stop()
+	is_typing = false
+	label.visible_characters = -1 
+	
+	# Take a snapshot of the current page number
+	var saved_index = current_line_index
+	
+	# Wait for 2 seconds
+	await get_tree().create_timer(2.0).timeout
+	
+	# ONLY auto-advance if the player hasn't manually skipped to a new page
+	if panel.visible and current_line_index == saved_index and not is_typing:
+		advance_dialogue()
+
+func advance_dialogue():
+	if not panel.visible: return 
+
+	current_line_index += 1
+	
+	if current_line_index < lines_queue.size():
+		show_current_line()
+	else:
 		panel.hide()
+
+# Change this from _unhandled_input to _input
+func _input(event): 
+	if panel.visible and event.is_action_pressed("interact"):
+		# The UI now eats the input FIRST, so the Sign never sees it!
+		get_viewport().set_input_as_handled() 
+		
+		if is_typing:
+			finish_typing()
+		else:
+			advance_dialogue()

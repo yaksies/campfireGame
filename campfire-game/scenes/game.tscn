@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bpne6t7un7wam"]
 
 [ext_resource type="PackedScene" uid="uid://dcjd0ky6v84tc" path="res://scenes/levels/level7.tscn" id="1_lbhrr"]
-[ext_resource type="PackedScene" uid="uid://n6n6brl24fak" path="res://scenes/player.tscn" id="3_vtaks"]
 [ext_resource type="Texture2D" uid="uid://cj3ie0gcwwjbw" path="res://assets/world/backdrop/parallax/sprite_1.png" id="9_vtaks"]
 [ext_resource type="Texture2D" uid="uid://br88nloi11wxw" path="res://assets/world/backdrop/parallax/sprite_0.png" id="10_kvpfn"]
 
@@ -10,19 +9,9 @@
 [node name="LevelSeven" parent="." unique_id=1300058714 instance=ExtResource("1_lbhrr")]
 position = Vector2(6.213623, 10.932404)
 
-[node name="Player" parent="LevelSeven" unique_id=1307399855 instance=ExtResource("3_vtaks")]
-top_level = true
-position = Vector2(90, -35)
-
-[node name="Camera2D" type="Camera2D" parent="LevelSeven/Player" unique_id=1434159485]
-zoom = Vector2(2.5, 2.5)
-limit_left = -150
-limit_smoothed = true
-position_smoothing_enabled = true
-
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=345183695]
 position = Vector2(146, -11)
-color = Color(0.16565639, 0.16565642, 0.16565636, 1)
+color = Color(0.11489672, 0.11489683, 0.11489678, 1)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1142850047]
 follow_viewport_enabled = true
