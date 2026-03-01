@@ -14,7 +14,7 @@ position = Vector2(6.213623, 10.932404)
 top_level = true
 position = Vector2(90, -35)
 
-[node name="Camera2D" type="Camera2D" parent="LevelSeven/Player" unique_id=867772181]
+[node name="Camera2D" type="Camera2D" parent="LevelSeven/Player" unique_id=1434159485]
 zoom = Vector2(2.5, 2.5)
 limit_left = -150
 limit_smoothed = true
@@ -29,7 +29,7 @@ follow_viewport_enabled = true
 
 [node name="backback" type="Parallax2D" parent="ParallaxBackground" unique_id=1511483217]
 scale = Vector2(1.007898, 1)
-scroll_scale = Vector2(0.1, 0.75)
+scroll_scale = Vector2(0.1, 0.075)
 repeat_size = Vector2(224, 224)
 repeat_times = 11
 
