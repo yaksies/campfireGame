@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://crwdiv87egxxc" path="res://scenes/sign.tscn" id="10_kq5qc"]
 [ext_resource type="PackedScene" uid="uid://boh0shnpw50u5" path="res://scenes/killzone.tscn" id="11_mfj1v"]
 [ext_resource type="Script" uid="uid://o5xtsvpj68vx" path="res://scripts/level_end_trigger.gd" id="12_ploog"]
+[ext_resource type="PackedScene" uid="uid://tmf3l102bbhu" path="res://scenes/bat.tscn" id="13_j0nb6"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_kykwg"]
 scenes/1/scene = ExtResource("2_ploog")
@@ -848,13 +849,13 @@ sources/7 = SubResource("TileSetAtlasSource_1ix84")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0g6gi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j0nb6"]
-size = Vector2(285, 188)
+size = Vector2(285, 254)
 
 [node name="Level6" type="Node2D" unique_id=1300058714]
 
 [node name="Player" parent="." unique_id=1307399855 instance=ExtResource("1_nd10q")]
 z_index = 1
-position = Vector2(1231, -496)
+position = Vector2(2389, -823)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1303355900]
 zoom = Vector2(2, 2)
@@ -893,26 +894,29 @@ position = Vector2(2805, 1123)
 script = ExtResource("12_ploog")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelEndTrigger" unique_id=1614617792]
-position = Vector2(4022, -1806)
+position = Vector2(4022, -1839)
 shape = SubResource("RectangleShape2D_j0nb6")
 
-[connection signal="body_entered" from="TileMap/@Area2D@57082" to="TileMap/@Area2D@57082" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@57083" to="TileMap/@Area2D@57083" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@57084" to="TileMap/@Area2D@57084" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@57085" to="TileMap/@Area2D@57085" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@57086" to="TileMap/@Area2D@57086" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@57087" to="TileMap/@Area2D@57087" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@57088" to="TileMap/@Area2D@57088" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@57089" to="TileMap/@Area2D@57089" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@57090" to="TileMap/@Area2D@57090" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@57091" to="TileMap/@Area2D@57091" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@57092" to="TileMap/@Area2D@57092" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@57093" to="TileMap/@Area2D@57093" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@57094" to="TileMap/@Area2D@57094" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@57095" to="TileMap/@Area2D@57095" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@57096" to="TileMap/@Area2D@57096" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@57097" to="TileMap/@Area2D@57097" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@57121" to="TileMap/@Area2D@57121" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@57122" to="TileMap/@Area2D@57122" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@57123" to="TileMap/@Area2D@57123" method="_on_body_entered"]
+[node name="Bat" parent="LevelEndTrigger" unique_id=67669957 instance=ExtResource("13_j0nb6")]
+position = Vector2(-329, -1946)
+
+[connection signal="body_entered" from="TileMap/@Area2D@55218" to="TileMap/@Area2D@55218" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@55219" to="TileMap/@Area2D@55219" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@55220" to="TileMap/@Area2D@55220" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@55221" to="TileMap/@Area2D@55221" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@55222" to="TileMap/@Area2D@55222" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@55223" to="TileMap/@Area2D@55223" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@55224" to="TileMap/@Area2D@55224" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@55225" to="TileMap/@Area2D@55225" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@55226" to="TileMap/@Area2D@55226" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@55227" to="TileMap/@Area2D@55227" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@55228" to="TileMap/@Area2D@55228" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@55229" to="TileMap/@Area2D@55229" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@55230" to="TileMap/@Area2D@55230" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@55231" to="TileMap/@Area2D@55231" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@55232" to="TileMap/@Area2D@55232" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@55233" to="TileMap/@Area2D@55233" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@55234" to="TileMap/@Area2D@55234" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@55235" to="TileMap/@Area2D@55235" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@55236" to="TileMap/@Area2D@55236" method="_on_body_entered"]
 [connection signal="body_entered" from="LevelEndTrigger" to="LevelEndTrigger" method="_on_body_entered"]

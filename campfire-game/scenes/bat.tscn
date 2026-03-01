@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cbrkko8thndfk" path="res://assets/bat-enemy/Bat-IdleFly.png" id="1_uhqni"]
 [ext_resource type="Texture2D" uid="uid://d045k1f0dagse" path="res://assets/bat-enemy/Bat-Attack1.png" id="2_lv0ya"]
 [ext_resource type="Texture2D" uid="uid://b3jd7fopb54m0" path="res://assets/bat-enemy/Bat-Run.png" id="3_ss3tx"]
+[ext_resource type="PackedScene" uid="uid://boh0shnpw50u5" path="res://scenes/killzone.tscn" id="5_lv0ya"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8qtcx"]
 atlas = ExtResource("2_lv0ya")
@@ -198,43 +199,29 @@ animations = [{
 "speed": 9.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_60pq2"]
-radius = 14.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_5fn3r"]
+radius = 15.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ss3tx"]
-radius = 200.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_lv0ya"]
-radius = 22.022715
-
-[node name="Bat" type="CharacterBody2D" unique_id=67669957]
-collision_layer = 255
-collision_mask = 255
+[node name="Bat" type="Node2D" unique_id=1788022746]
 script = ExtResource("1_ss3tx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1118672350]
 light_mask = 1023
 visibility_layer = 1023
 sprite_frames = SubResource("SpriteFrames_kn0w6")
-animation = &"Idle"
-autoplay = "Idle"
+animation = &"Chase"
+autoplay = "Chase"
+flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1437462440]
-position = Vector2(0, -2)
-shape = SubResource("CircleShape2D_60pq2")
+[node name="Killzone" parent="." unique_id=1219585669 instance=ExtResource("5_lv0ya")]
 
-[node name="DetectionRange" type="Area2D" parent="." unique_id=872801545]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=603655049]
+shape = SubResource("CircleShape2D_5fn3r")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionRange" unique_id=1551106507]
-position = Vector2(0, -2)
-shape = SubResource("CircleShape2D_ss3tx")
+[node name="RayRight" type="RayCast2D" parent="." unique_id=1883051372]
+target_position = Vector2(18, 0)
 
-[node name="AttackRange" type="Area2D" parent="." unique_id=1796070906]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange" unique_id=2126148796]
-shape = SubResource("CircleShape2D_lv0ya")
+[node name="RayLeft" type="RayCast2D" parent="." unique_id=1554750002]
+target_position = Vector2(-19, 0)
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
-[connection signal="body_shape_entered" from="DetectionRange" to="." method="_on_detection_range_body_shape_entered"]
-[connection signal="body_shape_exited" from="DetectionRange" to="." method="_on_detection_range_body_shape_exited"]
-[connection signal="body_shape_exited" from="AttackRange" to="." method="_on_attack_range_body_shape_exited"]
