@@ -864,4 +864,5 @@ script = ExtResource("10_oq8ku")
 position = Vector2(3664.5, -431)
 shape = SubResource("RectangleShape2D_mppvi")
 
+
 [connection signal="body_entered" from="LevelEndTrigger" to="LevelEndTrigger" method="_on_body_entered"]

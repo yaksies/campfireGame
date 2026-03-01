@@ -2,6 +2,11 @@
 
 [ext_resource type="Script" uid="uid://8swq1hgamljs" path="res://scripts/GameManager.gd" id="1_hwd4i"]
 [ext_resource type="AudioStream" uid="uid://d4fefj8prqa2x" path="res://sounds/sfx_-_death_explosion.ogg" id="2_glms7"]
+[ext_resource type="FontFile" uid="uid://cynh1uqfwsbfs" path="res://fonts/Boxy-Bold-Font/Boxy-Bold.ttf" id="2_udu3i"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oo155"]
+font = ExtResource("2_udu3i")
+font_size = 61
 
 [node name="GameManager" type="Node" unique_id=671649569]
 script = ExtResource("1_hwd4i")
@@ -17,6 +22,24 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer" unique_id=789895827]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.5
+offset_top = -11.5
+offset_right = 42.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "UPWARD"
+label_settings = SubResource("LabelSettings_oo155")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="." unique_id=1409561204]
 stream = ExtResource("2_glms7")
